@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Leaderboard - KursiYou.ai</title>
+
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <header>
+        <nav
+            class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Logo -->
+                    <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+                        <img src="assets/img/logo.png" alt="" />
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+                        </li>
+                        <!-- Default Active -->
+                        <li>
+                            <a href="#"
+                                class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu (Initially Hidden) -->
+                <div id="mobile-menu"
+                    class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+                    <ul class="flex flex-col items-center space-y-12 text-white">
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Home</a>
+                        </li>
+                        <!-- Default Active -->
+                        <li>
+                            <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex items-center justify-center mt-20 md:mt-32 pt-6 mb-16">
+        <div class="container">
+            <div class="w-full mx-auto px-2 md:px-4 pb-8 ">
+                <h2
+                    class="text-4xl text-center text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold mb-8">
+                    Leaderboard
+                </h2>
+
+                <div
+                    class="text-6xl text-center text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+
+
+
+                <div class="p-2 rounded-t-lg">
+                    <div class="flex justify-center space-x-4">
+                        <button
+                            class="px-4 py-2 text-transparent bg-clip-text 
+      bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+      rounded-lg focus:outline-none tabButtonLeaderBoard transition-all duration-300 ease-in-out border-b-2 border-yellow-400"
+                            onclick="showTab('localLeaderBoard', this)">Local Leaderboard</button>
+
+                        <button
+                            class="px-4 py-2 text-transparent bg-clip-text 
+      bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+      rounded-lg focus:outline-none tabButtonLeaderBoard transition-all duration-300 ease-in-out border-b-2 border-transparent"
+                            onclick="showTab('globalLeaderBoard', this)">Global Leaderboard</button>
+                    </div>
+                </div>
+
+
+
+                <div id="localLeaderBoard" class="tabContent p-4 mt-8 shadow-2xl rounded-lg">
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full table-auto text-sm">
+                            <thead class="bg-[#010d42] text-white text-left">
+                                <tr>
+                                    <th class="p-3">Rank</th>
+                                    <th class="p-3">Avatar Name</th>
+                                    <th class="p-3">Media</th>
+                                    <th class="p-3">Likes</th>
+                                    <th class="p-3">Views</th>
+                                    <th class="p-3">Score</th>
+                                    <th class="p-3">Posted</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-400 border-bottom-2 divide-y-2">
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">1</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]"
+                                            onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">2</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]"
+                                            onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">3</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]" onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">4</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]" onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-white bg-gray-600">5</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]" onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-white bg-gray-600">6</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]" onclick="openVideoModal()">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="globalLeaderBoard" class="tab-content p-4 hidden mt-8 shadow-lg rounded-lg">
+                    <div class="overflow-x-auto">
+                        <table class="w-full table-auto text-sm">
+                            <thead class="bg-[#131A3C] text-white text-left">
+                                <tr>
+                                    <th class="p-3">Rank</th>
+                                    <th class="p-3">Avatar Name</th>
+                                    <th class="p-3">Media</th>
+                                    <th class="p-3">Likes</th>
+                                    <th class="p-3">Views</th>
+                                    <th class="p-3">Score</th>
+                                    <th class="p-3">Posted</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-400 border-bottom-2 divide-y-2">
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">1</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">2</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">3</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                                <tr class="hover:bg-[#1e2448]">
+                                    <td class="p-3 font-bold"><span
+                                            class="rounded-full w-[32px] h-[32px] flex items-center justify-center p-4 text-gray-600 bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">4</span>
+                                    </td>
+                                    <td class="p-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-300">ACADEMIC_MENTOR</div>
+                                            <div
+                                                class="text-xs  text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                                                Uploaded by: rahul-s</div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3">
+                                        <div
+                                            class="relative w-80 h-48 rounded-lg overflow-hidden shadow-lg cursor-pointer border-2 border-white-500 w-[80px] h-[80px]">
+                                            <img src="assets/img/profile.png" alt="Video Thumbnail"
+                                                class="w-full h-full object-cover" />
+
+                                            <div
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 transition duration-300 hover:bg-opacity-60">
+                                                <i class="fa-solid fa-circle-play text-4xl text-white"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="p-3"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-heart text-red-600"></i> 0</span></td>
+                                    <td class="p-3 texta-white"><span class="flex items-center gap-1 text-white"><i
+                                                class="fa-solid fa-eye text-blue-400"></i> 2</span></td>
+                                    <td class="p-3 text-white">2</td>
+                                    <td class="p-3 text-white">6/23/2025</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+        <div class="relative w-full max-w-3xl aspect-video bg-black rounded-xl shadow-lg">
+            <!-- Close Button -->
+            <button onclick="closeVideoModal()"
+                class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-600 transition z-10">&times;</button>
+
+            <!-- Video -->
+            <div class="aspect-w-16 aspect-h-9">
+                <video id="modalVideo" controls class="w-full h-full rounded-lg">
+                    <source src="assets/videos/sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text-center bg-black bg-opacity-15 p-6">
+            <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+                <img src="assets/img/logo.png" alt="" />
+            </a>
+
+            <ul
+                class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help
+                        Center</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy
+                        Policy</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+                </li>
+            </ul>
+
+            <ul class="flex justify-center my-6 space-x-5">
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+            <div class="border-t border-gray-700 pt-6">
+                <span class="block text-sm text-center text-gray-400">© 2025
+                    <a href="#"
+                        class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+                    All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function showTab(tabIdToShow, clickedButton) {
+            const tabContents = document.querySelectorAll('.tabContent, .tab-content');
+            const tabButtons = document.querySelectorAll('.tabButtonLeaderBoard');
+
+            tabContents.forEach(tab => {
+                tab.classList.add('hidden');
+            });
+
+            tabButtons.forEach(btn => {
+                btn.classList.remove('border-yellow-400');
+                btn.classList.add('border-transparent');
+            });
+
+            const selectedTab = document.getElementById(tabIdToShow);
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+            }
+
+            clickedButton.classList.remove('border-transparent');
+            clickedButton.classList.add('border-yellow-400');
+        }
+
+
+        // Video Popup
+
+        function openVideoModal() {
+            document.getElementById('videoModal').classList.remove('hidden');
+            document.getElementById('modalVideo').play();
+        }
+
+        function closeVideoModal() {
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            video.currentTime = 0;
+            document.getElementById('videoModal').classList.add('hidden');
+        }
+
+    </script>
+
+
+</body>
+
+</html>

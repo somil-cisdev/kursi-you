@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Progress - KursiYou.ai</title>
+
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <style>
+        .owl-nav button:hover{
+            background: transparent !important;
+        }
+        .owl-nav button button:hover{
+            background-image: linear-gradient(227.14deg, #F9FFCF -4.88%, #F2DB73 45.32%, #C49235 103.07%) !important;
+        }
+        .owl-nav button.disabled{
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <header>
+        <nav
+            class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Logo -->
+                    <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+                        <img src="assets/img/logo.png" alt="" />
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+                        </li>
+                        <!-- Default Active -->
+                        <li>
+                            <a href="#"
+                                class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu (Initially Hidden) -->
+                <div id="mobile-menu"
+                    class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+                    <ul class="flex flex-col items-center space-y-12 text-white">
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Home</a>
+                        </li>
+                        <!-- Default Active -->
+                        <li>
+                            <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex items-center justify-center mt-20 md:mt-32 pt-6 mb-16">
+        <div class="max-w-6xl w-full mx-auto px-2 md:px-4 pb-8 ">
+            <form>
+
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="text-center lg:mt-0 mt-12 mb-12">
+                            <h2
+                                class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">
+                                Interests
+                            </h2>
+                        </div>
+
+
+                        <div
+                            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 md:p-8 px-2 py-4  rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f]">
+
+                            <div class="flex flex-wrap justify-center lg:gap-4 gap-2 pb-2" id="allInterests">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+
+                        <div class="text-center my-12">
+                            <h2
+                                class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">
+                                Hobbies
+                            </h2>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 md:p-8 px-2 py-4  rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f]">
+                            <div class="flex flex-wrap justify-center lg:gap-4 gap-2 pb-2" id="allHobbies">
+                            </div>
+                        </div>
+
+
+                        <!-- <button type="submit"
+                            class="w-fit flex items-center mx-auto h-[56px] py-2 mt-10 lg:text-lg text-md px-10 text-[black] rounded-full uppercase font-medium transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                            Submit
+                        </button> -->
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="text-center bg-black bg-opacity-15 p-6">
+            <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+                <img src="assets/img/logo.png" alt="" />
+            </a>
+
+            <ul
+                class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help
+                        Center</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy
+                        Policy</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+                </li>
+            </ul>
+
+            <ul class="flex justify-center my-6 space-x-5">
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+            <div class="border-t border-gray-700 pt-6">
+                <span class="block text-sm text-center text-gray-400">© 2025
+                    <a href="#"
+                        class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+                    All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        let allInterests = [
+            "Artificial Intelligence",
+            "Space Exploration",
+            "Psychology",
+            "Philosophy",
+            "History",
+            "Science",
+            "Technology",
+            "Programming",
+            "Entrepreneurship",
+            "Finance",
+            "Investing",
+            "Self-Improvement",
+            "Health & Wellness",
+            "Fitness",
+            "Nutrition",
+            "Sustainability",
+            "Environmental Conservation",
+            "Politics",
+            "Social Activism",
+            "Education",
+            "Literature",
+            "Art",
+            "Music",
+            "Film & Cinema",
+            "Theater",
+            "Fashion",
+            "Travel",
+            "Cultural Studies",
+            "Sports",
+            "Gaming"
+        ];
+        let allHobbies = [
+            "Photography",
+            "Traveling",
+            "Cooking",
+            "Reading",
+            "Writing",
+            "Gardening",
+            "Painting",
+            "Drawing",
+            "Hiking",
+            "Cycling",
+            "Gaming",
+            "Music",
+            "Dancing",
+            "Yoga",
+            "Meditation",
+            "Fitness",
+            "Swimming",
+            "Fishing",
+            "Astronomy",
+            "Technology",
+            "Coding",
+            "Blogging",
+            "Fashion",
+            "DIY Crafts",
+            "Baking",
+            "Sports",
+            "Movies",
+            "Theater",
+            "Volunteering",
+            "Languages"
+        ];
+
+        let interestContainer = document.querySelector("#allInterests");
+        let HobbiesContainer = document.querySelector("#allHobbies");
+
+        allInterests.map((item) => {
+            let box = document.createElement("div");
+            box.className = "custom-gradient-border m-0 w-fit peer relative";
+            box.innerHTML = `
+            <input type="checkbox" id="${item}" name="interests" class="hidden peer">
+            <label for=" ${item}"
+                class="w-full h-full py-2  px-4 bg-[#1C1D22] peer-checked:text-black peer-checked:bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none flex gap-2 items-center cursor-pointer peer-checked:pr-10 md:text-base text-sm">
+                ${item}
+            </label>
+            <span class="peer-checked:block hidden absolute text-[#FF3B2B] text-xs font-bold top-0 left-0 w-full h-full p-4 flex items-center text-end justify-end leading-[1] pointer-events-none">╳</span>`
+
+            interestContainer.appendChild(box);
+        })
+
+        allHobbies.map((item) => {
+            let box = document.createElement("div");
+            box.className = "custom-gradient-border m-0  w-fit peer relative";
+            box.innerHTML = `
+            <input type="checkbox" id="hobby-${item}" name="hobbies" class="hidden peer">
+            <label for="hobby-${item}"
+                class="w-full h-full py-2 px-4 bg-[#1C1D22] peer-checked:text-black peer-checked:bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none flex gap-2 items-center cursor-pointer peer-checked:pr-10 md:text-base text-sm">
+                ${item}
+            </label>
+            <span class="peer-checked:block hidden absolute text-[#FF3B2B] text-xs font-bold top-0 left-0 w-full h-full p-4 flex items-center text-end justify-end leading-[1] pointer-events-none">╳</span>`
+
+            HobbiesContainer.appendChild(box);
+        })
+
+
+        // slider js 
+
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                items: 1,
+                nav: true,
+                loop: false,
+                mouseDrag: false,
+                touchDrag: false,
+                pullDrag: false,
+                navText: [
+                    // "prev", "next"
+                    `<div class='flex gap-3 items-center'><div class='w-fit flex items-center mx-auto h-[56px] py-2 mt-10 lg:text-lg text-md px-10 text-[black] rounded-full uppercase font-medium transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]'>previous</div>
+                    <button type="submit"
+                            class="w-fit flex items-center mx-auto h-[56px] py-2 mt-10 lg:text-lg text-md px-10 text-[black] rounded-full uppercase font-medium transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]  hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                            Submit
+                        </button>`,
+                    "<div class='w-fit flex items-center mx-auto h-[56px] py-2 mt-10 lg:text-lg text-md px-10 text-[black] rounded-full uppercase font-medium transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]'>Next</div>"
+                ],
+                dots: false
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

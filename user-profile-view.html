@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>::Profile View::</title>
+
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com/4.0.0"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TW Elements JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <style>
+        .showUnchecked .custom-gradient-border :has(input:checked){
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] flex items-center justify-center min-h-screen p-8 py-12">
+    <div
+        class="max-w-[1200px] w-full mx-auto bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 p-6 md:p-12 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30">
+        <!-- Profile Title -->
+        <div class="border-b pb-4 mb-4 border-gray-700">
+            <h1
+                class="text-3xl text-transparent bg-clip-text 
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold text-center mb-8 mt-5">
+                User Profile
+            </h1>
+        </div>
+
+        <!-- Profile Form -->
+        <form>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-5 pb-9 ">
+                <!-- Profile Image Upload -->
+                <div class="text-center">
+                    <!-- <img class="w-32 h-32 rounded-full mx-auto border-4 border-gray-300" src="assets/img/profile.png"
+                        alt=""> -->
+
+                    <div
+                        class="relative inline-block p-[1.5px] rounded-full bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] mb-4">
+                        <img src="assets/img/profile.png" alt="Profile Picture"
+                            class="w-[140px] h-[140px] rounded-full object-cover">
+                    </div>
+
+                    <div>
+                        <input type="file" id="file-upload" class="hidden">
+                        <label for="file-upload"
+                            class="cursor-pointer font-medium text-transparent bg-clip-text 
+                            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] text-lg">Update
+                            Picture</label>
+                    </div>
+                </div>
+
+
+                <!-- Profile Details -->
+                <div class="md:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                        <div class="mb-5 text-left">
+                            <label class="text-white text-md">Full Name</label>
+                            <div class="custom-gradient-border mt-3">
+                                <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                               outline-none border-none" placeholder="Enter Full Name">
+                            </div>
+                        </div>
+
+                        <div class="mb-5 text-left">
+                            <label class="text-white text-md">Email ID</label>
+                            <div class="custom-gradient-border mt-3">
+                                <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                               outline-none border-none" placeholder="Enter Email ID">
+                            </div>
+                        </div>
+                        <div class="mb-5 text-left">
+                            <label class="text-white text-md">Date of Birth</label>
+                            <div class="custom-gradient-border mt-3">
+                                <input type="text" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                               outline-none border-none" placeholder="DD-MM-YYYY">
+                            </div>
+                        </div>
+
+                        <div class="text-left mb-5 relative">
+                            <label class="text-white text-md">Gender</label>
+                            <div class="custom-gradient-border mt-3">
+                                <select class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                    focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                                   outline-none border-none appearance-none pr-10">
+                                    <option>Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="absolute top-[55%] right-3 flex items-center pointer-events-none">
+
+                                <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-left mb-5 relative">
+                            <label class="text-white text-md">City</label>
+                            <div class="custom-gradient-border mt-3">
+                                <select class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                    focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                                   outline-none border-none appearance-none pr-10">
+                                    <option selected>New York</option>
+                                    <option>Delhi</option>
+                                    <option>Tokyo</option>
+                                    <option>Sydney</option>
+                                </select>
+                            </div>
+                            <div class="absolute top-[55%] right-3 flex items-center pointer-events-none">
+
+                                <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 text-left">
+                            <label class="text-white text-md">Zip Code</label>
+                            <div class="custom-gradient-border mt-3">
+                                <input type="email"
+                                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                    placeholder="Enter Zip Code">
+                            </div>
+                        </div>
+
+                        <div class="mb-5 text-left relative">
+                            <label class="text-white text-md cursor-pointer">Interests</label>
+                            <input type="checkbox" id="intLabel" class="hidden peer">
+                            <div class="custom-gradient-border mt-3 relative">
+                                <div
+                                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none">
+                                    <label class="w-full h-full cursor-pointer block" for="intLabel"
+                                        id="interestLabel">Interests</label>
+                                </div>
+                                <div class="absolute top-[30%] right-1 flex items-center pointer-events-none">
+
+                                    <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="peer-checked:block hidden bg-gradient-to-b absolute w-full max-w-[316px] top-[100px] left-[10px] from-[#0d1b3e] to-[#08102a] bg-opacity-30 flex flex-wrap justify-center lg:gap-4 gap-2 p-4 rounded-2xl h-[180px] overflow-y-auto shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] z-10">
+                                <div class="space-y-2 w-full customDropdown" id="allInterests">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 text-left relative">
+                            <label class="text-white text-md cursor-pointer">Hobbies</label>
+                            <input type="checkbox" id="hobLabel" class="hidden peer">
+                            <div class="custom-gradient-border mt-3 relative">
+                                <div
+                                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                                focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none">
+                                    <label class="w-full h-full cursor-pointer block" for="hobLabel"
+                                        id="hobbiesLabel">Hobbies</label>
+                                </div>
+                                <div class="absolute top-[30%] right-1 flex items-center pointer-events-none">
+
+                                    <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="peer-checked:block hidden bg-gradient-to-b absolute w-full max-w-[316px] top-[100px] left-[10px] from-[#0d1b3e] to-[#08102a] bg-opacity-30 flex flex-wrap justify-center lg:gap-4 gap-2 p-4 rounded-2xl h-[180px] overflow-y-auto shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] z-10">
+                                <div class="space-y-2 w-full customDropdown" id="allHobbies">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex gap-12 hidden d-none">
+                        <button type="button"
+                            class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]"
+                            onclick="handleEdit()">
+                            Edit
+                        </button>
+
+                        <div
+                            class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                            <button class="w-full h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px]">
+                                <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-6 flex gap-12">
+                        <button type="submit" class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+            hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                            Update
+                        </button>
+
+                        <div
+                            class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                            <button class="w-full h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px]">
+                                <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const allInterests = [
+            { name: "Artificial Intelligence", isChecked: true },
+            { name: "Space Exploration", isChecked: true },
+            { name: "Psychology", isChecked: true },
+            { name: "Philosophy", isChecked: true },
+            { name: "History", isChecked: true },
+            { name: "Science", isChecked: false },
+            { name: "Technology", isChecked: false },
+            { name: "Programming", isChecked: false },
+            { name: "Entrepreneurship", isChecked: false },
+            { name: "Finance", isChecked: false },
+            { name: "Investing", isChecked: false },
+            { name: "Self-Improvement", isChecked: false },
+            { name: "Health & Wellness", isChecked: false },
+            { name: "Fitness", isChecked: false },
+            { name: "Nutrition", isChecked: false },
+            { name: "Sustainability", isChecked: false },
+            { name: "Environmental Conservation", isChecked: false },
+            { name: "Politics", isChecked: false },
+            { name: "Social Activism", isChecked: false },
+            { name: "Education", isChecked: false },
+            { name: "Literature", isChecked: false },
+            { name: "Art", isChecked: false },
+            { name: "Music", isChecked: false },
+            { name: "Film & Cinema", isChecked: false },
+            { name: "Theater", isChecked: false },
+            { name: "Fashion", isChecked: false },
+            { name: "Travel", isChecked: false },
+            { name: "Cultural Studies", isChecked: false },
+            { name: "Sports", isChecked: false },
+            { name: "Gaming", isChecked: false }
+        ];
+
+        const allHobbies = [
+            { name: "Photography", isChecked: true },
+            { name: "Traveling", isChecked: true },
+            { name: "Cooking", isChecked: true },
+            { name: "Reading", isChecked: true },
+            { name: "Writing", isChecked: true },
+            { name: "Gardening", isChecked: false },
+            { name: "Painting", isChecked: false },
+            { name: "Drawing", isChecked: false },
+            { name: "Hiking", isChecked: false },
+            { name: "Cycling", isChecked: false },
+            { name: "Gaming", isChecked: false },
+            { name: "Music", isChecked: false },
+            { name: "Dancing", isChecked: false },
+            { name: "Yoga", isChecked: false },
+            { name: "Meditation", isChecked: false },
+            { name: "Fitness", isChecked: false },
+            { name: "Swimming", isChecked: false },
+            { name: "Fishing", isChecked: false },
+            { name: "Astronomy", isChecked: false },
+            { name: "Technology", isChecked: false },
+            { name: "Coding", isChecked: false },
+            { name: "Blogging", isChecked: false },
+            { name: "Fashion", isChecked: false },
+            { name: "DIY Crafts", isChecked: false },
+            { name: "Baking", isChecked: false },
+            { name: "Sports", isChecked: false },
+            { name: "Movies", isChecked: false },
+            { name: "Theater", isChecked: false },
+            { name: "Volunteering", isChecked: false },
+            { name: "Languages", isChecked: false }
+        ];
+
+        let interestContainer = document.querySelector("#allInterests");
+        let HobbiesContainer = document.querySelector("#allHobbies");
+
+        let selectedInterests = 0;
+        let selectedHobbies = 0;
+
+        allInterests.map((item, index) => {
+            let box = document.createElement("div");
+            box.className = "custom-gradient-border m-0 w-full peer relative";
+            box.innerHTML = `
+            <input type="checkbox" id="${item.name}" name="interests" class="hidden peer customOption ${item.isChecked && "checkedOption"}" ${item.isChecked && "checked"} >
+            <label for="${item.name}"
+                class="w-full h-full py-1 px-3  bg-[#1C1D22] peer-checked:text-black peer-checked:bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none flex gap-2 items-center cursor-pointer peer-checked:pr-10 text-sm">
+                ${item.name}
+            </label>
+            <span class="peer-checked:block hidden absolute text-[#FF3B2B] text-[10px]   font-bold top-0 left-0 w-full h-full px-3 flex items-center text-end justify-end leading-[3] pointer-events-none">╳</span>`
+            interestContainer.appendChild(box);
+            item.isChecked && selectedInterests++;
+        })
+        document.querySelector("#interestLabel").innerHTML = `${selectedInterests} selected`;
+
+
+        allHobbies.map((item) => {
+            let box = document.createElement("div");
+            box.className = "custom-gradient-border m-0 w-full peer relative";
+            box.innerHTML = `
+            <input type="checkbox" id="${item.name}" name="hobbies" class="hidden peer customOption ${item.isChecked && "checkedOption"}" ${item.isChecked && "checked"} >
+            <label for="${item.name}"
+                class="w-full h-full py-1 px-3  bg-[#1C1D22] peer-checked:text-black peer-checked:bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none flex gap-2 items-center cursor-pointer peer-checked:pr-10 text-sm">
+                ${item.name}
+            </label>
+            <span class="peer-checked:block hidden absolute text-[#FF3B2B] text-[10px]   font-bold top-0 left-0 w-full h-full px-3 flex items-center text-end justify-end leading-[3] pointer-events-none">╳</span>`
+
+            HobbiesContainer.appendChild(box);
+
+            item.isChecked && selectedHobbies++;
+        })
+        document.querySelector("#hobbiesLabel").innerHTML = `${selectedHobbies} selected`;
+
+
+        function handleEdit() {
+            let dropdowns = document.querySelectorAll(".customDropdown");
+            dropdowns.forEach((item) => {
+                item.classList.add("showUnchecked");
+            })
+        }
+
+        function handleCheck(index, arr){
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

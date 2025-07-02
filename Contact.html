@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KursiYou.ai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</head>
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+                    <img src="assets/img/logo.png" alt="Logo">
+                </a>
+                <ul class="hidden md:flex space-x-6 text-white">
+                    <li><a href="#" class="hover:text-[#F2DB73] transition-all duration-500">Home</a></li>
+                    <li><a href="#" class="hover:text-[#F2DB73] transition-all duration-500">Gallery</a></li>
+                    <li><a href="#" class="hover:text-[#F2DB73] transition-all duration-500">Profile</a></li>
+                    <li><a href="#" class="active hover:text-[#F2DB73] transition-all duration-500">Contact</a></li>
+                </ul>
+                <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-20 md:pt-32 pb-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">
+                    Contact Us
+                </h1>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Have questions or need assistance? We're here to help! Reach out to us through any of the following channels.
+                </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Email Card -->
+                <div class="custom-gradient-border rounded-xl p-[2px]">
+                    <div class="bg-[#1c1d22] rounded-xl p-6 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)] flex items-center justify-center">
+                                <i class="fas fa-envelope text-[#F2DB73] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white ml-4">Email Us</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Send us an email and we'll get back to you as soon as possible.</p>
+                        <a href="mailto:support@kursiyou.ai" class="text-[#F2DB73] hover:text-[#C49235] transition-colors">
+                            support@kursiyou.ai
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Chat Card -->
+                <div class="custom-gradient-border rounded-xl p-[2px]">
+                    <div class="bg-[#1c1d22] rounded-xl p-6 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)] flex items-center justify-center">
+                                <i class="fas fa-comments text-[#F2DB73] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white ml-4">Live Chat</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Chat with our support team in real-time for immediate assistance.</p>
+                        <button class="primary-button py-2 px-4 text-sm font-medium">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FAQ Card -->
+                <div class="custom-gradient-border rounded-xl p-[2px]">
+                    <div class="bg-[#1c1d22] rounded-xl p-6 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)] flex items-center justify-center">
+                                <i class="fas fa-question-circle text-[#F2DB73] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white ml-4">FAQ</h3>
+                        </div>
+                        <p class="text-gray-400 mb-4">Find quick answers to common questions in our FAQ section.</p>
+                        <a href="#" class="text-[#F2DB73] hover:text-[#C49235] transition-colors">
+                            Visit FAQ Page →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="max-w-2xl mx-auto">
+                <div class="custom-gradient-border rounded-xl p-[2px]">
+                    <div class="bg-[#1c1d22] rounded-xl p-6">
+                        <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] mb-6">
+                            Send us a Message
+                        </h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-400 mb-2">Name</label>
+                                <input type="text" class="w-full bg-[#2a2b30] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F2DB73]">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">Email</label>
+                                <input type="email" class="w-full bg-[#2a2b30] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F2DB73]">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">Subject</label>
+                                <input type="text" class="w-full bg-[#2a2b30] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F2DB73]">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2">Message</label>
+                                <textarea rows="4" class="w-full bg-[#2a2b30] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#F2DB73]"></textarea>
+                            </div>
+                            <button type="submit" class="primary-button py-3 px-6 font-medium w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-15 p-6">
+        <div class="text-center">
+            <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+                <img src="assets/img/logo.png" alt="Logo">
+            </a>
+
+            <ul class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12">
+                <li><a href="#" class="text-gray-400 hover:text-[#F2DB73]">Gallery</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#F2DB73]">Profile</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#F2DB73]">Help Center</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#F2DB73]">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#F2DB73]">Support</a></li>
+            </ul>
+
+            <div class="border-t border-gray-700 pt-6">
+                <span class="block text-sm text-center text-gray-400">
+                    © 2025 <a href="#" class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>. All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

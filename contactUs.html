@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="assets/img/fav-icon.png"
+      sizes="64x64"
+      type="image/png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>:: Contact Us ::</title>
+
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/custom.js"></script>
+  </head>
+
+  <body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <nav
+      class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+            <img src="assets/img/logo.png" alt="" />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+            <li>
+              <a
+                href="#"
+                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out"
+                >Home</a
+              >
+            </li>
+            <!-- Default Active -->
+            <li>
+              <a
+                href="#"
+                class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-[#F2DB73] text-2xl focus:outline-none"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div
+          id="mobile-menu"
+          class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out"
+        >
+          <ul class="flex flex-col items-center space-y-12 text-white">
+            <li><a href="#" class="menu-link hover:text-[#F2DB73]">Home</a></li>
+            <!-- Default Active -->
+            <li>
+              <a href="#" class="menu-link active hover:text-[#F2DB73]"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex items-center justify-center mt-32 mb-16">
+      <div class="max-w-6xl mx-auto w-full p-5">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1
+            class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold"
+          >
+            Contact Us
+          </h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Form -->
+          <div
+            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 p-8 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f]"
+          >
+            <form>
+              <div class="mb-5">
+                <label class="text-white text-md block mb-2">Full Name</label>
+                <div class="custom-gradient-border">
+                  <input
+                    type="text"
+                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <label class="text-white text-md block mb-2"
+                  >Email Address</label
+                >
+                <div class="custom-gradient-border">
+                  <input
+                    type="email"
+                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <label class="text-white text-md block mb-2">Subject</label>
+                <div class="custom-gradient-border">
+                  <input
+                    type="text"
+                    class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                    placeholder="Enter subject"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <label class="text-white text-md block mb-2">Message</label>
+                <div class="custom-gradient-border">
+                  <textarea
+                    class="w-full h-[150px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none resize-none"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-black rounded-full transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div
+            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 p-8 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f]"
+          >
+            <h2 class="text-xl text-white font-semibold mb-6">Get in Touch</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-yellow-400 mt-1 mr-4">
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-medium mb-1">Address</h3>
+                  <p class="text-gray-300">
+                    123 AI Street<br />Tech City, TC 12345<br />United States
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-yellow-400 mt-1 mr-4">
+                  <i class="fas fa-phone-alt text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-medium mb-1">Phone</h3>
+                  <p class="text-gray-300">+1 (555) 123-4567</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-yellow-400 mt-1 mr-4">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-medium mb-1">Email</h3>
+                  <p class="text-gray-300">contact@kursiyou.ai</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-yellow-400 mt-1 mr-4">
+                  <i class="fas fa-clock text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-medium mb-1">Working Hours</h3>
+                  <p class="text-gray-300">
+                    Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday - Sunday:
+                    Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="text-white font-medium mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center bg-black bg-opacity-15 p-6">
+      <a
+        href="#"
+        class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block"
+      >
+        <img src="assets/img/logo.png" alt="" />
+      </a>
+
+      <ul
+        class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500"
+      >
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out"
+            >Gallery</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out"
+            >Profile</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out"
+            >Help Center</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out"
+            >Support</a
+          >
+        </li>
+      </ul>
+
+      <ul class="flex justify-center my-6 space-x-5">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]"
+            >
+              <i
+                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"
+              ></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]"
+            >
+              <i
+                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"
+              ></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]"
+            >
+              <i
+                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"
+              ></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]"
+            >
+              <i
+                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"
+              ></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]"
+            >
+              <i
+                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"
+              ></i>
+            </button>
+          </a>
+        </li>
+      </ul>
+      <div class="border-t border-gray-700 pt-6">
+        <span class="block text-sm text-center text-gray-400"
+          >© 2025
+          <a
+            href="#"
+            class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold"
+            >KURSIYOU.AI</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

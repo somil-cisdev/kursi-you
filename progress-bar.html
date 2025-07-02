@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Progress - KursiYou.ai</title>
+
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <style>
+        /* Add smooth transitions for the progress line */
+        #progress-line {
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Transition effect for showing and hiding steps */
+        .step-content {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+
+        .step-content.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Highlight transition for progress circles */
+        .step-circle {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <nav
+        class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+                    <img src="assets/img/logo.png" alt="" />
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+                    <li>
+                        <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+                    </li>
+                    <!-- Default Active -->
+                    <li>
+                        <a href="#"
+                            class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu (Initially Hidden) -->
+            <div id="mobile-menu"
+                class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+                <ul class="flex flex-col items-center space-y-12 text-white">
+                    <li><a href="#" class="menu-link hover:text-[#F2DB73]">Home</a></li>
+                    <!-- Default Active -->
+                    <li>
+                        <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex items-center justify-center mt-20 md:mt-32 pt-6 mb-16">
+        <div class="max-w-4xl w-full mx-auto px-2 md:px-4 pb-8">
+            <!-- Transaction history Section -->
+            <section class="mb-8 md:mb-12 flex justify-between flex-wrap">
+
+                <div class="flex gap-4 custom-gradient-border  w-full mb-6 m-0">
+                    <div class="text-white bg-[#1c1d22] px-4 py-6 w-full h-full rounded-xl">
+                        <div class="bg-[#2c2c2c] w-full  p-1 rounded-xl">
+                            <div id="progressLine"
+                                class="bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] w-1/4 h-3  rounded-xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 custom-gradient-border m-0 w-[49%] max-w-98">
+                    <div class="text-white bg-[#1c1d22] px-4 py-6 w-full h-full rounded-xl">
+                        <h2 class="text-xl text-[#F2DB73] font-bold text-center">
+                            Daily Task Form
+                        </h2>
+
+                        <!-- Progress Section -->
+                        <div class="relative mt-8">
+                            <!-- Progress Line Background -->
+                            <div
+                                class="absolute top-1/2 transform -translate-y-1/2 bg-gray-200 h-2 w-full rounded z-[-1]">
+                            </div>
+                            <!-- Progress Line Fill -->
+                            <div id="progress-line"
+                                class="absolute top-1/2 transform -translate-y-1/2 bg-[#e0bf5b] h-1 rounded"
+                                style="width: 0"></div>
+
+                            <!-- Progress Circles -->
+                            <div class="flex justify-between relative z-10">
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">1</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">2</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">3</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">4</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">5</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">6</span>
+                                </div>
+                                <div
+                                    class="step-circle p-1 bg-[#1c1d22] w-8 h-8 rounded-full border-2 border-[#e0bf5b]">
+                                    <span
+                                        class="step-inner-circle w-full h-full rounded-full flex items-center justify-center text-white font-bold">7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="task-form" class="mt-10">
+                            <!-- Steps -->
+                            <div id="step-1" class="step-content mt-4 active">
+                                <label class="block text-white mb-3">Monday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-2" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Tuesday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-3" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Wednesday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-4" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Thursday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-5" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Friday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-6" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Saturday Task</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+                            <div id="step-7" class="step-content mt-4 hidden">
+                                <label class="block text-white mb-3">Sunday Task & Summary</label>
+
+                                <div class="custom-gradient-border ms-0 mr-1">
+                                    <input type="textarea" rows="4" cols="50"
+                                        class="w-full  p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500 outline-none border-none"
+                                        placeholder="Enter your task" />
+                                </div>
+                            </div>
+
+                            <button type="button" id="next-btn"
+                                class="w-full h-[56px] py-3 mt-5 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                                Next
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 custom-gradient-border m-0 w-[49%]  ">
+                    <div class="text-white bg-[#1c1d22] px-4 py-6 w-full h-full rounded-xl relative size-40">
+                        <svg class="rotate-[270deg] size-full" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Circle (Gauge) -->
+                            <circle cx="18" cy="18" r="16" fill="none"
+                                class="stroke-current text-[#2c2c2c] dark:text-neutral-700" stroke-width="1.5"
+                                stroke-dasharray="100 100" stroke-linecap="round"></circle>
+
+                            <!-- Gauge Progress -->
+                            <circle cx="18" cy="18" r="16" fill="none"
+                                class="stroke-current text-[#e0bf5b] dark:text-blue-500" stroke-width="1.6"
+                                stroke-dasharray="40 100" stroke-linecap="round"></circle>
+                        </svg>
+
+                        <!-- Value Text -->
+                        <div class="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                            <span
+                                class="text-8xl font-bold text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]  dark:text-blue-500">40</span>
+                            <span class="text-[#cea242] dark:text-blue-500 block">Score</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text-center bg-black bg-opacity-15 p-6">
+            <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+                <img src="assets/img/logo.png" alt="" />
+            </a>
+
+            <ul
+                class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help
+                        Center</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy
+                        Policy</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+                </li>
+            </ul>
+
+            <ul class="flex justify-center my-6 space-x-5">
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 hover:text-gray-300">
+                        <button
+                            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                            <i
+                                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+            <div class="border-t border-gray-700 pt-6">
+                <span class="block text-sm text-center text-gray-400">© 2025
+                    <a href="#"
+                        class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+                    All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+
+        function updateStep() {
+            // Hide all steps
+            document.querySelectorAll(".step-content").forEach((step, index) => {
+                step.classList.remove("active");
+                step.classList.add("hidden");
+            });
+
+            // Show the current step with animation
+            const activeStep = document.getElementById(`step-${currentStep}`);
+            activeStep.classList.add("active");
+            activeStep.classList.remove("hidden");
+
+            // Update Circle Progress with animation
+            document.querySelectorAll(".step-inner-circle").forEach((circle, index) => {
+                if (index < currentStep) {
+                    circle.classList.add("bg-[#e0bf5b]", "text-black");
+                } else {
+                    circle.classList.remove("bg-[#e0bf5b]", "text-black");
+                }
+            });
+
+            // Animate the progress line
+            const progressWidth = ((currentStep - 1) / 6) * 100;
+            document.getElementById(
+                "progress-line"
+            ).style.width = `${progressWidth}%`;
+
+            document.getElementById("next-btn").innerText =
+                currentStep < 7 ? "Next" : "Finish";
+        }
+
+        document.getElementById("next-btn").addEventListener("click", () => {
+            if (currentStep < 7) {
+                currentStep++;
+                updateStep();
+            } else {
+                alert("Task submission complete!");
+            }
+        });
+
+        updateStep();
+    </script>
+
+    <script>
+        let pl = parseFloat(document.getElementById("progressLine").style.width) || 0;
+
+        let pl_timer = setInterval(() => {
+            if (pl < 100) {
+                pl += 1;
+                document.getElementById("progressLine").style.width = pl + "%"
+            } else {
+                clearInterval(pl_timer);
+                document.getElementById("progressLine").style.width = 0;
+            }
+        }, 1000) 
+    </script>
+</body>
+
+</html>

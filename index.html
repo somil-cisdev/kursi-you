@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Favicon-->
+  <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+  <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>KursiYou.ai</title>
+
+  <!-- Tailwind CSS config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <style>
+    .custom-drop-shadow {
+      filter: drop-shadow(0px 0px 3px #dbb654);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+  <header>
+    <nav
+      class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+            <img src="assets/img/logo.png" alt="" />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+            <li>
+              <a href="#" class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+            </li>
+            <!-- Default Active -->
+            <li>
+              <a href="#" class="menu-link  hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu"
+          class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+          <ul class="flex flex-col items-center space-y-12 text-white">
+            <li><a href="#" class="menu-link hover:text-[#F2DB73]">Home</a></li>
+            <!-- Default Active -->
+            <li>
+              <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="flex flex-col items-center justify-center mt-20 md:mt-32 sm:mb-16 mb-10 pt-20 md:pt-14 space-y-4">
+
+      <div class="flex items-center justify-center sm:mb-6 mb-4 flex-col lg:space-y-8 md:space-y-6 sm:space-y-4 space-y-2">
+        <div class="lg:w-72 sm:w-64 w-44 sm:mb-0 mb-2 ">
+          <img src="./assets/img/kursi.png" alt="KursiYou.Ai" class=" w-auto h-auto" />
+        </div>
+        <p class="text-white md:text-4xl sm:text-2xl text-xl ">HELLO EVA</p>
+        <h1
+          class="text-2xl tracking-wide font-bold sm:text-3xl md:text-5xl lg:text-6xl text-transparent bg-clip-text 
+        bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold text-center custom-drop-shadow ">
+          LET’S GET STARTED!
+        </h1>
+      </div>
+      <div class="md:max-w-2xl sm:max-w-sm max-w-xs max-w w-full mx-auto sm:px-8 pb-8">
+        <button type="submit" class="w-full sm:h-[60px] h-[48px] py-3 lg:text-lg text-md lg:px-0 px-5 font-bold text-black rounded-full transition 
+                bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+           hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+          Chat with AI
+        </button>
+
+        <div
+          class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full mt-5">
+          <button class="w-full sm:h-[60px] h-[48px] font-bold lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+            <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">Customize AI
+              Avatar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="text-center bg-black bg-opacity-15 p-6">
+      <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+        <img src="assets/img/logo.png" alt="" />
+      </a>
+
+      <ul
+        class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help Center</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+        </li>
+      </ul>
+
+      <ul class="flex justify-center my-6 space-x-5">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+      </ul>
+      <div class="border-t border-gray-700 pt-6">
+        <span class="block text-sm text-center text-gray-400">© 2025
+          <a href="#"
+            class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+          All Rights Reserved.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Modal functionality
+    document.addEventListener("DOMContentLoaded", function () {
+      const closeButtons = document.querySelectorAll(".close-button");
+      const modals = document.querySelectorAll(".modal-backdrop");
+
+      // Add click event to all close buttons
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const modal = this.closest(".modal-backdrop");
+          if (modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      });
+
+      // Function to show confirmation modal
+      window.showConfirmationModal = function () {
+        if (modals.length > 0) {
+          modals[0].classList.remove("hidden");
+        }
+      };
+
+      // Function to show navigation modal
+      window.showNavigationModal = function () {
+        if (modals.length > 0) {
+          modals[1].classList.remove("hidden");
+        }
+      };
+    });
+  </script>
+</body>
+
+</html>

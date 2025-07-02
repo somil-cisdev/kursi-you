@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>::SignIn::</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/custom.js"></script>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+
+    <section class="flex items-center justify-center min-h-screen bg-gradient-to-b from-[#0d1b3e] to-[#08102a]">
+        <div
+            class="w-[600px] bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 p-16 md:p-12 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] p-4 rounded-lg text-center m-10">
+            <div>
+                <img src="assets/img/KURSIYOU.AI.svg" alt="" class="mx-auto max-w-[200px]">
+            </div>
+            <h3 class="text-2xl text-white font-normal my-8">Sign In</h3>
+            <p class="text-white mb-8">Welcome to KursiYou.ai Your Throne Awaits! Unlock a
+                world where AI serves you, guides you, and empowers you</p>
+
+            <form>
+
+                <div class="mb-5 text-left">
+                    <label class="text-white text-md">Email ID</label>
+                    <div class="custom-gradient-border mt-3">
+                        <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+                        focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                                       outline-none border-none" placeholder="Enter Email ID">
+                    </div>
+                </div>
+
+                <div class="mb-2 text-left relative">
+                    <label class="text-white text-md">Password</label>
+                    <div class="custom-gradient-border relative mt-3">
+                        <input type="password" id="password"
+                            class="w-full h-[56px] p-4 bg-[#1C1D22] text-white rounded-2xl 
+                        focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 placeholder-gray-500 outline-none border-none transition-all duration-500 ease-out"
+                            placeholder="Enter Password">
+                        <i class="fa fa-eye absolute top-[50%] right-4 text-white cursor-pointer transform -translate-y-1/2"
+                            id="togglePassword"></i>
+                    </div>
+                </div>
+                <div class="text-right mb-8">
+                    <a href="#"
+                        class="text-gray-400 hover:text-[#F2DB73] text-md transition-all duration-500 ease-out">Forgot
+                        Password?</a>
+                </div>
+
+                <button type="submit" class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-black rounded-full transition 
+                bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+           hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                    Sign In
+                </button>
+
+            </form>
+
+            <div class="flex items-center justify-center my-8 text-gray-400">
+                <div class="w-1/3 h-px bg-gray-500"></div>
+                <span class="mx-2 my-3 text-md">Or Sign In With</span>
+                <div class="w-1/3 h-px bg-gray-500"></div>
+            </div>
+
+            <div
+                class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full">
+                <button class="w-full h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                    <img src="assets/img/google.svg" alt="" class="w-6">
+                    <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">Sign in with
+                        Google</span>
+                </button>
+            </div>
+
+            <div
+                class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full mt-5">
+                <button class="w-full h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                    <img src="assets/img/fb.svg" alt="" class="w-6">
+                    <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]">Sign in with
+                        Facebook</span>
+                </button>
+            </div>
+
+
+
+
+            <p class="mt-5 text-white flex justify-center items-center gap-3">Already have an account?
+                <a href="#"
+                    class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold hover:underline">Sign
+                    Up</a>
+            </p>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="text-center bg-black bg-opacity-15 p-6  border-t border-gray-700">
+            <div class="container flex flex-wrap lg:justify-between justify-center items-center mx-auto space-y-3">
+                    <ul
+                        class="text-md flex items-center justify-center flex-col md:flex-row md:w-auto w-full gap-4 md:gap-8 transition-all duration-500">
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help
+                                Center</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy
+                                Policy</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+                        </li>
+                    </ul>
+                    <div class=" ">
+                        <span class="block text-sm text-center text-gray-400">© 2025
+                            <a href="#"
+                                class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+                            All Rights Reserved.
+                        </span>
+                    </div>
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

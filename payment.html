@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="assets/img/fav-icon.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Payment Options</title>
+    <!-- Tailwind CSS config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+  <body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+    <nav
+      class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+            <img src="assets/img/logo.png" alt="Logo" />
+          </a>
+          <ul class="hidden md:flex space-x-6 text-white">
+            <li>
+              <a
+                href="#"
+                class="text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 pt-32 pb-16">
+      <div class="payment-container">
+        <h2
+          class="text-2xl md:text-3xl gradient-text font-bold text-center mb-8"
+        >
+          <i class="fas fa-credit-card mr-2"></i>Select Payment Method
+        </h2>
+
+        <!-- Total Amount Section -->
+        <div
+          class="mb-8 p-6 rounded-xl bg-[linear-gradient(130deg,_rgba(255,223,13,0.32),_rgba(255,223,13,0))]"
+        >
+          <div class="flex md:items-center items-start md:justify-between  flex-col md:flex-row gap-4">
+            <div class="flex items-center ">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center mr-3 bg-[rgba(242,219,115,0.1)]"
+              >
+                <i class="fas fa-shopping-cart text-[#F2DB73]"></i>
+              </div>
+              <div>
+                <h3 class="text-white text-lg font-semibold">Total Amount</h3>
+                <p class="text-gray-400 text-sm">
+                  Including all applicable taxes
+                </p>
+              </div>
+            </div>
+            <div class="md:text-right">
+              <p class="text-2xl font-bold gradient-text">$99.99</p>
+              <p class="text-gray-400 text-sm">USD</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="payment-option relative" onclick="selectPayment(this, 'paypal')">
+          <div class="flex items-center space-x-3">
+            <div>
+              <img
+                class="w-100 h-10 object-contain"
+                src="./assets/img/paypal.svg"
+                alt="PayPal"
+              />
+            </div>
+            <div>
+                <h5 class="text-white">Paypal</h5>
+              <p class="text-gray-400 text-sm">
+                Pay securely with your PayPal account
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-option relative" onclick="selectPayment(this, 'orange')">
+          <div class="flex items space-x-3">
+            <div>
+              <img
+                class="w-100 h-10 object-contain"
+                src="./assets/img/orange-money.svg"
+                alt="Orange Money"
+              />
+            </div>
+            <div>
+              <h5 class="text-white">Orange Money</h5>
+              <p class="text-gray-400 text-sm">
+                Pay using your Orange Money account
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <button
+            type="submit"
+            class="h-[56px] p-3 lg:text-lg text-md font-medium px-5 text-[black] rounded-full bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]"
+          >
+            Proceed to Payment
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function selectPayment(element, paymentMethod) {
+        // Remove active class from all payment options
+        document.querySelectorAll('.payment-option').forEach(option => {
+          option.classList.remove('active');
+        });
+        
+        // Add active class to selected payment option
+        element.classList.add('active');
+      }
+    </script>
+  </body>
+</html>
