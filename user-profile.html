@@ -15,7 +15,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>FAQ - KursiYou.ai</title>
+  <title>User Profile - KursiYou.ai</title>
 
   <!-- Tailwind CSS config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,7 @@
 
 <body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
   <nav
-    class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+    class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] sticky top-0 left-0 w-full z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
@@ -80,49 +80,52 @@
     </div>
   </nav>
 
-  <div class="container mx-auto px-6 py-8 mt-20 md:mt-32 pt-6 mb-16">
+  <div class="container mx-auto px-6 py-8 mt-10 pt-6 mb-16">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Left Column -->
       <div class="lg:col-span-2 space-y-8">
         <!-- Profile Header -->
-        <div class="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-2xl p-8">
-          <div class="flex items-center gap-6 mb-8">
+         <div
+            class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full">
+            <div class="bg-gradient-to-b from-[#162D56] to-[#121D2E]
+                        rounded-[30px] md:p-8 px-2 py-4">
+          <div class="flex items-center md:gap-6 gap-2 md:px-0 px-2 md:mb-8 mb-4 ">
             <div class="relative">
               <img src="assets/img/profile.png" alt="Profile"
-                class="w-24 h-24 rounded-full border-2 border-yellow-500/30" />
+                class="md:w-24 w-16 md:h-24 h-16 rounded-full border-2 border-yellow-500/30" />
               <!-- <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-slate-800">
               </div> -->
             </div>
             <div class="flex-1">
-              <p class="text-slate-400 text-sm mb-2">Referred by Rayan Jude</p>
+              <p class="text-slate-400 sm:text-sm text-xs mb-2">Referred by Rayan Jude</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="grid md:grid-cols-2 md:gap-6 grid-cols-1 gap-4 mb-8">
             <div class="space-y-4">
               <div class="custom-gradient-border">
                 <div class="flex justify-between items-center py-4 bg-[#1c1d22] px-4 rounded-xl">
                   <span
                     class="text-transparent bg-clip-text 
-            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold font-medium">Name</span>
-                  <span class="text-white">Kathryn Murphy</span>
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] sm:text-sm text-xs font-medium">Name</span>
+                  <span class="text-white sm:text-sm text-xs">Kathryn Murphy</span>
                 </div>
               </div>
               <div class="custom-gradient-border">
                 <div class="flex justify-between items-center py-4 bg-[#1c1d22] px-4 rounded-xl">
                   <span
                     class="text-transparent bg-clip-text 
-            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold font-medium">Gender</span>
-                  <span class="text-white">Female</span>
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] sm:text-sm text-xs font-medium">Gender</span>
+                  <span class="text-white sm:text-sm text-xs">Female</span>
                 </div>
               </div>
               <div class="custom-gradient-border">
                 <div class="flex justify-between items-center py-4 bg-[#1c1d22] px-4 rounded-xl">
                   <span
                     class="text-transparent bg-clip-text 
-            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold font-medium">Email
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] sm:text-sm text-xs font-medium">Email
                     ID</span>
-                  <span class="text-white">xyz@example.com</span>
+                  <span class="text-white sm:text-sm text-xs">xyz@example.com</span>
                 </div>
               </div>
             </div>
@@ -131,11 +134,11 @@
                 <div class="flex justify-between items-center py-4 bg-[#1c1d22] px-4 rounded-xl">
                   <span
                     class="text-transparent bg-clip-text 
-            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold font-medium">Referral
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] sm:text-sm text-xs font-medium">Referral
                     Code</span>
-                  <div class="flex items-center gap-4">
-                    <span class="text-white">2K21KURSI</span>
-                    <i class="fa-regular fa-copy cursor-pointer hover:text-yellow-400 text-gray-400 text-xl"></i>
+                  <div class="flex items-center  md:gap-4 gap-2">
+                    <span class="text-white sm:text-sm text-xs">2K21KURSI</span>
+                    <i class="fa-regular fa-copy cursor-pointer hover:text-yellow-400 text-gray-400 md:text-xl text-lg"></i>
                   </div>
                 </div>
               </div>
@@ -143,26 +146,26 @@
                 <div class="flex justify-between items-center py-4 bg-[#1c1d22] px-4 rounded-xl">
                   <span
                     class="text-transparent bg-clip-text 
-            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold font-medium">Daily
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] sm:text-sm text-xs font-medium">Daily
                     Screen Time</span>
-                  <div class="flex items-center gap-4">
-                    <span class="text-white">40 Min</span>
-                    <img src="assets/img/progress.svg" width="24" />
+                  <div class="flex items-center md:gap-4 gap-2">
+                    <span class="text-white sm:text-sm text-xs">40 Min</span>
+                    <img src="assets/img/progress.svg" class="md:w-6 w-4" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="flex gap-4">
-            <button class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
+          <div class="flex md:flex-row flex-col gap-4 md:px-0 px-2 ">
+            <button class="w-full md:h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
             bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
             hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
               Edit Profile
             </button>
             <div
               class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
-              <button class="w-full h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-4 text-white flex items-center justify-center gap-3 
+              <button class="w-full md:h-[56px] font-medium lg:text-lg text-md lg:px-0 px-5 py-3 text-white flex items-center justify-center gap-3 
                         bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
                         rounded-[30px]">
                 <span class="text-transparent bg-clip-text 
@@ -172,13 +175,14 @@
             </div>
           </div>
         </div>
+        </div>
 
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <!-- Analytics -->
           <div
             class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full">
             <div class="bg-gradient-to-b from-[#162D56] to-[#121D2E]
-                        rounded-[30px] p-6">
+                        rounded-[30px] md:p-8 px-4 py-6">
               <h2
                 class="text-transparent bg-clip-text 
             bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold text-xl font-semibold mb-6">
@@ -308,9 +312,9 @@
                 </div>
               </div>
 
-              <button onclick="showExportChatModal()" class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
-              bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
-              hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+              <button onclick="showExportChatModal()" class="w-full md:h-[56px] py-3 lg:text-lg text-sm lg:px-0 px-5 font-medium text-[black] rounded-full transition 
+            bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
+            hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                 <i class="fa-solid fa-cart-shopping"></i>
                 Get More Wallpapers
               </button>
@@ -336,13 +340,13 @@
                 <h2 class="text-white text-xl font-semibold">Kursi Coins</h2>
               </div>
               <div
-                class="relative inline-block rounded-[8px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-max mb-5 overflow-hidden">
-                <div class="w-max h-[40px] font-medium lg:text-lg text-md lg:px-0 px-5 py-3 text-white flex items-center justify-center gap-3 
+                class="relative inline-block rounded-[8px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] md:w-fit w-full mb-5 overflow-hidden">
+                <div class="md:w-fit w-full h-[40px] font-medium lg:text-lg text-md lg:px-0 py-3 text-white flex items-center justify-center gap-3 
                         bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
                         rounded-[8px]">
                   <span
                     class="text-transparent bg-clip-text 
-                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] flex items-center justify-start gap-2 px-5 text-base font-semibold">Current
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] flex items-center justify-start gap-2 md:px-5 px-2 md:text-base text-sm font-semibold">Current
                     balance:
                     <div class="w-5 h-5">
                       <img src="assets/img/coin.png" />
@@ -357,7 +361,7 @@
                 Customize your avatar with Kursi Coins! Purchase more to unlock exclusive items.
               </p>
 
-              <button class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
+              <button class="w-full md:h-[56px] py-3 lg:text-lg md:text-md text-sm lg:px-0 px-5 font-medium text-[black] rounded-full transition 
             bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
             hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -381,15 +385,15 @@
                 <h2 class="text-white text-xl font-semibold">Kursi Gems</h2>
               </div>
               <div
-                class="relative inline-block rounded-[8px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-max mb-5 overflow-hidden">
-                <div class="w-max h-[40px] font-medium lg:text-lg text-md lg:px-0 px-5 py-3 text-white flex items-center justify-center gap-3 
+                class="relative inline-block rounded-[8px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] md:w-fit w-full mb-5 overflow-hidden">
+                <div class="md:w-fit w-full h-[40px] font-medium lg:text-lg text-md lg:px-0 py-3 text-white flex items-center justify-center gap-3 
                         bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
                         rounded-[8px]">
                   <span
                     class="text-transparent bg-clip-text 
-                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] flex items-center justify-start gap-2 px-5 text-base font-semibold">Current
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] flex items-center justify-start gap-2 md:px-5 px-2 md:text-base text-sm font-semibold">Current
                     balance:
-                    <div class="w-5 h-5 rounded-full">
+                    <div class="w-5 h-5">
                       <img src="assets/img/gems.png" />
                     </div>
                     <span class="text-transparent bg-clip-text 
@@ -402,7 +406,7 @@
                 Use Kursi Gems to unlock chat backgrounds! Earn more through activities or buy instantly.
               </p>
 
-              <button class="w-full h-[56px] py-3 lg:text-lg text-md lg:px-0 px-5 font-medium text-[black] rounded-full transition 
+              <button class="w-full md:h-[56px] py-3 lg:text-lg md:text-md text-sm lg:px-0 px-5 font-medium text-[black] rounded-full transition 
             bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] 
             hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -417,56 +421,6 @@
 
 
 
-  <div class="max-w-md mx-auto mt-10 bg-black p-6 rounded-2xl border border-yellow-400">
-  <h2 class="text-center text-yellow-300 text-xl font-semibold mb-4">Question</h2>
-  <p class="text-white text-center text-2xl font-medium leading-snug mb-6">
-    What is your experience with night owling while working 9-5 job?
-  </p>
-
-  <form class="space-y-4">
-    <!-- Option 1 -->
-    <label class="flex items-center gap-3 p-4 rounded-xl border-2 border-yellow-500 cursor-pointer bg-gradient-to-br from-[#2c2c2c] to-[#1e1e1e] peer-checked:bg-yellow-100 transition duration-300 relative">
-      <input type="radio" name="experience" class="peer hidden" checked>
-      <div class="w-5 h-5 rounded-full border-2 border-yellow-400 flex items-center justify-center">
-        <div class="w-2.5 h-2.5 rounded-full bg-yellow-400 hidden peer-checked:block"></div>
-      </div>
-      <span class="text-white text-lg">I am not happy</span>
-    </label>
-
-    <!-- Option 2 -->
-    <label class="flex items-center gap-3 p-4 rounded-xl bg-[#0e0f1b] hover:bg-[#1a1a2f] cursor-pointer transition duration-300 relative">
-      <input type="radio" name="experience" class="peer hidden">
-      <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center">
-        <div class="w-2.5 h-2.5 rounded-full bg-yellow-400 hidden peer-checked:block"></div>
-      </div>
-      <span class="text-white text-lg">I feel stuck in my life</span>
-    </label>
-
-    <!-- Option 3 -->
-    <label class="flex items-center gap-3 p-4 rounded-xl bg-[#0e0f1b] hover:bg-[#1a1a2f] cursor-pointer transition duration-300 relative">
-      <input type="radio" name="experience" class="peer hidden">
-      <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center">
-        <div class="w-2.5 h-2.5 rounded-full bg-yellow-400 hidden peer-checked:block"></div>
-      </div>
-      <span class="text-white text-lg">I like it</span>
-    </label>
-
-    <!-- Option 4 -->
-    <label class="flex items-center gap-3 p-4 rounded-xl bg-[#0e0f1b] hover:bg-[#1a1a2f] cursor-pointer transition duration-300 relative">
-      <input type="radio" name="experience" class="peer hidden">
-      <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center">
-        <div class="w-2.5 h-2.5 rounded-full bg-yellow-400 hidden peer-checked:block"></div>
-      </div>
-      <span class="text-white text-lg">I'm loving it</span>
-    </label>
-
-    <!-- Submit Button -->
-    <button type="submit"
-      class="w-full mt-6 py-3 text-black font-semibold rounded-full bg-gradient-to-r from-yellow-300 to-yellow-500 shadow-[0_0_30px_#FFDF0D] hover:scale-[1.02] transition">
-      Submit
-    </button>
-  </form>
-</div>
 
 
   <footer>
