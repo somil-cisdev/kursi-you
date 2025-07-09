@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Favicon-->
+  <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+  <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Wrong Answer - KursiYou.ai</title>
+
+  <!-- Tailwind CSS config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+  <header>
+    <nav
+      class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+            <img src="assets/img/logo.png" alt="" />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+            </li>
+            <!-- Default Active -->
+            <li>
+              <a href="#" class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu"
+          class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+          <ul class="flex flex-col items-center space-y-12 text-white">
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Home</a>
+            </li>
+            <!-- Default Active -->
+            <li>
+              <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+            </li>
+            <li>
+              <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex items-center justify-center mt-20 md:mt-32 pt-6 mb-16">
+    <div class="max-w-6xl w-full mx-auto px-2 md:px-4 pb-8">
+
+
+
+
+
+      <div
+        class="relative inline-block rounded-[30px] p-[2px] bg-[linear-gradient(185deg,_#F9FFCF_0%,_#F2DB73_47%,_#C49235_100%)] w-full mt-1">
+        <div
+          class="w-full h-full lg:px-10 px-5 py-8  lg:py-12 bg-gradient-to-b from-[#0d1b3e] to-[#08102a] rounded-[30px] hoverr :shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+          <div class="overflow-x-auto md:overflow-x-visible">
+            <div class="md:min-w-0">
+
+                <div class="py-32 relative flex flex-col items-center ">
+                  <div class="conical-bgImg absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <img src="./assets/img/answer-bg.png" alt="" class="w-[650px] h-[650px] opacity-40 animate-spin">
+                  </div>
+                  <div class="custom-gradient-border mt-8 w-fit rounded-full mx-auto">
+                    <div
+                      class="md:p-8 p-4 md:w-32 md:h-32 w-16 h-16 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)] text-white rounded-full flex items-center justify-center">
+                      <i class="fa-solid fa-thumbs-down animate-bounce md:text-5xl text-2xl"></i>
+                    </div>
+                  </div>
+                  <p class="text-center text-shadow-gold-sm md:text-lg text-sm text-white w-fit">
+                    Oops!
+                  </p>
+                  <p class="text-center text-shadow-gold-sm md:text-2xl text-base text-white w-fit">
+                    You have answered is wrongly!
+                  </p>
+                </div>
+              
+
+              <div class="flex items-center md:flex-row flex-col justify-center md:gap-6 gap-3 max-w-xl mx-auto mt-3">
+                <button type="submit"
+                  class="w-full md:h-[56px] py-3 lg:text-lg text-md px-5 font-medium text-[black] rounded-full transition bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                  Retry
+                </button>
+
+                <div
+                  class="relative inline-block rounded-[30px] p-[1px] bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] w-full hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                  <button class="w-full font-medium md:h-[56px] lg:text-lg text-md px-5 py-3 text-white flex items-center justify-center gap-3 
+                        bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,_#515563_0%,_#1C1D22_100%)]
+                        rounded-[30px]">
+                    <span class="text-transparent bg-clip-text 
+                    bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)]"> Go to
+                      Home</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="text-center bg-black bg-opacity-15 p-6">
+      <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+        <img src="assets/img/logo.png" alt="" />
+      </a>
+
+      <ul
+        class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help Center</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+        </li>
+      </ul>
+
+      <ul class="flex justify-center my-6 space-x-5">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-300">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+              <i
+                class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+            </button>
+          </a>
+        </li>
+      </ul>
+      <div class="border-t border-gray-700 pt-6">
+        <span class="block text-sm text-center text-gray-400">© 2025
+          <a href="#"
+            class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+          All Rights Reserved.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

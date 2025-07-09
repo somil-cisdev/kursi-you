@@ -329,3 +329,32 @@ body {
 .mcq-inner:has(input:checked) {
     background: radial-gradient(64.58% 64.58% at 76.04% 20.49%, #515563 0%, #1C1D22 100%);
 }
+
+.text-shadow-gold-sm {
+    text-shadow: 0 0 2px #F2DB73;
+}
+
+.text-shadow-gold-lg {
+    text-shadow: 0 0 4px #F2DB73;
+}
+
+.conical-bgImg img {
+    animation-duration: 24s;
+}
+
+.flip-animation {
+    transition: all 500ms linear;
+    animation: flip 2s infinite ease-in-out;
+}
+
+
+@keyframes flip {
+    to {
+        transform: rotateY(0deg);
+    }
+
+    from {
+        transform: rotateY(180deg);
+    }
+
+}
