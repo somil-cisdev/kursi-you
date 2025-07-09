@@ -100,7 +100,7 @@ body {
 }
 
 .buy-button:hover {
-    box-shadow: 0px 0px 50px 0px rgba(255,223,13,0.3);
+    box-shadow: 0px 0px 50px 0px rgba(255, 223, 13, 0.3);
 }
 
 /* Section Headers */
@@ -110,7 +110,7 @@ body {
     padding: clamp(1rem, 3vw, 1.5rem);
     margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 0.75rem;
-    background: linear-gradient(130deg, rgba(255,223,13,0.32), rgba(255,223,13,0));
+    background: linear-gradient(130deg, rgba(255, 223, 13, 0.32), rgba(255, 223, 13, 0));
 }
 
 .section-icon {
@@ -166,7 +166,7 @@ body {
     .owl-carousel .owl-item {
         padding: 0 4px;
     }
-    
+
     .custom-gradient-border {
         margin: 4px;
     }
@@ -176,7 +176,7 @@ body {
     .owl-carousel .owl-item {
         padding: 0 8px;
     }
-    
+
     .custom-gradient-border {
         margin: 8px;
     }
@@ -186,7 +186,7 @@ body {
     .owl-carousel .owl-item {
         padding: 0 12px;
     }
-    
+
     .custom-gradient-border {
         margin: 12px;
     }
@@ -221,15 +221,14 @@ body {
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
-    background: radial-gradient(
-      64.58% 64.58% at 76.04% 20.49%,
-      #515563 0%,
-      #1c1d22 100%
-    );
+    background: radial-gradient(64.58% 64.58% at 76.04% 20.49%,
+            #515563 0%,
+            #1c1d22 100%);
     border: 1px solid rgba(242, 219, 115, 0.2);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  }
-  .payment-option {
+}
+
+.payment-option {
     border: 2px solid rgba(242, 219, 115, 0.2);
     border-radius: 8px;
     padding: 20px;
@@ -237,28 +236,96 @@ body {
     cursor: pointer;
     background: rgba(28, 29, 34, 0.8);
     transition: all 0.3s ease;
-  }
-  .payment-option.active {
+}
+
+.payment-option.active {
     border: 2px solid #F2DB73;
     background: rgba(242, 219, 115, 0.05);
     box-shadow: 0 0 15px rgba(242, 219, 115, 0.2);
-  }
-  .gradient-text {
-    background: linear-gradient(
-      227.14deg,
-      #f9ffcf -4.88%,
-      #f2db73 45.32%,
-      #c49235 103.07%
-    );
+}
+
+.gradient-text {
+    background: linear-gradient(227.14deg,
+            #f9ffcf -4.88%,
+            #f2db73 45.32%,
+            #c49235 103.07%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .gradient-button {
-    background: linear-gradient(
-      227.14deg,
-      #f9ffcf -4.88%,
-      #f2db73 45.32%,
-      #c49235 103.07%
-    );
+}
+
+.gradient-button {
+    background: linear-gradient(227.14deg,
+            #f9ffcf -4.88%,
+            #f2db73 45.32%,
+            #c49235 103.07%);
     color: #000;
-  }
+}
+
+
+/* Modal Css */
+
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.modal-container {
+    background: linear-gradient(180deg, #1c1d22 0%, #08102a 100%);
+    border: 1px solid;
+    border-image-source: linear-gradient(227.14deg,
+            #f9ffcf -4.88%,
+            #f2db73 45.32%,
+            #c49235 103.07%);
+    border-radius: 16px;
+    box-shadow: 0px 4px 24px rgba(0, 103, 161, 0.18);
+}
+
+.primary-button {
+    background: linear-gradient(227.14deg,
+            #f9ffcf -4.88%,
+            #f2db73 45.32%,
+            #c49235 103.07%);
+    border-radius: 9999px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    box-shadow: 0px 0px 50px 0px rgba(255, 223, 13, 0.3);
+}
+
+.secondary-button {
+    background: #1c1d22;
+    border: 1px solid #f2db73;
+    border-radius: 9999px;
+    color: #f2db73;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: rgba(242, 219, 115, 0.1);
+}
+
+.close-button {
+    color: #f2db73;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    color: #c49235;
+}
+
+
+/* Custom radio button styles */
+
+.mcq-options {
+    background-color: #080F20;
+}
+
+.mcq-options:has(input:checked) {
+    background: linear-gradient(to right, #F9FFCF, #F2DB73, #C49235);
+}
+
+.mcq-inner:has(input:checked) {
+    background: radial-gradient(64.58% 64.58% at 76.04% 20.49%, #515563 0%, #1C1D22 100%);
+}
