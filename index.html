@@ -15,6 +15,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/swiper.min.css" />
   <title>KursiYou.ai</title>
 
   <!-- Tailwind CSS config -->
@@ -89,12 +90,66 @@
 
 
   <main>
+
+
+
+    <section class="trending mt-20 md:mt-32 sm:mb-16 mb-10 pt-20 md:pt-14 space-y-4">
+      <div class="container">
+
+
+        <!-- <div class="smoke-bg-right">
+          <img src="images/smoke-bg-right1.png" alt="">
+        </div>
+        <div class="smoke-bg-left">
+          <img src="images/smoke-bg-left1.png" alt="">
+        </div> -->
+        <div class="section-heading">
+          <h2>Top trending games</h2>
+        </div>
+        <div class="swiper-slider-outer fadeInUp wow">
+          <div class="swiper-container swiper-slider1 loading">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall1.png" class="entity-img" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall2.png" class="entity-img" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall3.png" class="entity-img" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall4.png" class="entity-img" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall1.png" class="entity-img" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/chatWall2.png" class="entity-img" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"><img src="images/" alt="" srcset=""></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+
+
     <div class="flex flex-col items-center justify-center mt-20 md:mt-32 sm:mb-16 mb-10 pt-20 md:pt-14 space-y-4">
 
-      <div class="flex items-center justify-center sm:mb-6 mb-4 flex-col lg:space-y-8 md:space-y-6 sm:space-y-4 space-y-2">
-        <div class="lg:w-72 sm:w-64 w-44 sm:mb-0 mb-2 ">
+      <div
+        class="flex items-center justify-center sm:mb-6 mb-4 flex-col lg:space-y-8 md:space-y-6 sm:space-y-4 space-y-2">
+
+
+
+        <!-- <div class="lg:w-72 sm:w-64 w-44 sm:mb-0 mb-2 ">
           <img src="./assets/img/kursi.png" alt="KursiYou.Ai" class=" w-auto h-auto" />
-        </div>
+        </div> -->
         <p class="text-white md:text-4xl sm:text-2xl text-xl ">HELLO EVA</p>
         <h1
           class="text-2xl tracking-wide font-bold sm:text-3xl md:text-5xl lg:text-6xl text-transparent bg-clip-text 
@@ -207,6 +262,60 @@
     </div>
   </footer>
 
+
+  <script src="assets/js/swiper.min.js"></script>
+
+
+  <script>
+    // Params
+    var sliderSelector = '.swiper-slider1',
+      options = {
+        init: false,
+        loop: true,
+        speed: 800,
+        slidesPerView: 2, // or 'auto'
+        spaceBetween: 0,
+        centeredSlides: true,
+        effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+        coverflowEffect: {
+          rotate: 50, // Slide rotate in degrees
+          stretch: 0, // Stretch space between slides (in px)
+          depth: 100, // Depth offset in px (slides translate in Z axis)
+          modifier: 1, // Effect multipler
+          slideShadows: true, // Enables slides shadows
+        },
+        grabCursor: true,
+        parallax: true,
+        //pagination: {
+        // el: '.swiper-pagination',
+        // clickable: true,
+        // },
+        parallax: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          991: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          }
+        },
+        // Events
+        on: {
+          imagesReady: function () {
+            this.el.classList.remove('loading');
+          }
+        }
+      };
+    var mySwiper = new Swiper(sliderSelector, options);
+
+    // Initialize slider
+    mySwiper.init();
+
+  </script>
+
+
   <script>
     // Modal functionality
     document.addEventListener("DOMContentLoaded", function () {
@@ -238,6 +347,8 @@
       };
     });
   </script>
+
+
 </body>
 
 </html>

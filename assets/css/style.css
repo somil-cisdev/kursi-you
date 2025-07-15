@@ -358,3 +358,81 @@ body {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+.swiper-slide {
+    height: 539px;
+}
+
+.swiper-slider-outer {
+    position: relative;
+    padding: 0 120px;
+    display: block;
+    vertical-align: top;
+    width: auto;
+    overflow: hidden;
+    margin: 0 -120px;
+}
+.trending .swiper-slide {
+    height: 515px;
+    overflow: hidden;
+}
+
+.trending .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev {
+    background: url(/images/prev-arrow.png) no-repeat -83px 0;
+    opacity: 1 !important;
+    visibility: visible;
+    width: 84px;
+    height: 98px;
+    left: 0;
+    border: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -49px;
+    text-indent: -999px;
+    overflow: hidden;
+    transition: none;
+}
+.swiper-button-prev:hover{
+    background: url(/images/next-arrow.png) no-repeat -83px 0;
+    transform: rotate(180deg);
+}
+.swiper-button-next {
+    background: url(/images/prev-arrow.png) no-repeat -83px 0;
+    opacity: 1 !important;
+    visibility: visible;
+    width: 84px;
+    height: 98px;
+    right: 0;
+    border: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -49px;
+    text-indent: -999px;
+    overflow: hidden;
+    transition: none;
+    transform: rotate(180deg);
+}
+.swiper-button-next:hover {
+    background: url(/images/next-arrow.png) no-repeat -83px 0;
+    transform: revert;
+}
+
+.swipe-btn {
+    position: relative;
+}
