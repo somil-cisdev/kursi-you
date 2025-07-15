@@ -345,6 +345,29 @@ body {
 .flip-animation {
     transition: all 500ms linear;
     animation: flip 2s infinite ease-in-out;
+
+}
+
+.swiper-slide{
+    transition: all 0.2s ease-in-out;
+    cursor: grab;
+    opacity: 0;
+}
+.swiper-slide:active{
+    cursor: grabbing;
+}
+.swiper-slide.swiper-slide-active {
+    transform: scale(1.2);
+    z-index: 1;
+    opacity: 1;
+}
+.swiper-slide.swiper-slide-prev {
+    transform: perspective(1000px) rotateY(-45deg) scale(0.9) !important;
+    opacity: 0.3;
+}
+.swiper-slide.swiper-slide-next {
+    transform: perspective(1000px) rotateY(45deg) scale(0.9) !important;
+    opacity: 0.3;
 }
 
 
