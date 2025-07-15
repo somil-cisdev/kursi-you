@@ -93,46 +93,49 @@
 
 
 
-    <section class="trending mt-20 md:mt-32 sm:mb-16 mb-10 pt-20 md:pt-14 space-y-4">
-      <div class="container">
+    <section class="relative mt-20 md:mt-32 sm:mb-16 mb-10 pt-20 md:pt-14">
+      <div class="max-w-6xl mx-auto px-4 overflow-hidden">
+        <div class="swiper swiper-slider1">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden rounded-lg">
+                <img src="assets/img/chatWall1.png" alt="Slide 1" class="w-full h-full object-cover rounded-lg" />
+              </div>
+            </div>
 
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden rounded-lg">
+                <img src="assets/img/chatWall2.png" alt="Slide 2" class="w-full h-full object-cover rounded-lg" />
+              </div>
+            </div>
 
-        <!-- <div class="smoke-bg-right">
-          <img src="images/smoke-bg-right1.png" alt="">
-        </div>
-        <div class="smoke-bg-left">
-          <img src="images/smoke-bg-left1.png" alt="">
-        </div> -->
-        <div class="section-heading">
-          <h2>Top trending games</h2>
-        </div>
-        <div class="swiper-slider-outer fadeInUp wow">
-          <div class="swiper-container swiper-slider1 loading">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall1.png" class="entity-img" alt="" />
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden rounded-lg">
+                <img src="assets/img/chatWall3.png" alt="Slide 3" class="w-full h-full object-cover rounded-lg" />
               </div>
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall2.png" class="entity-img" alt="" />
+            </div>
+
+            <!-- More Slides -->
+            <div class="swiper-slide">
+              <div class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden rounded-lg">
+                <img src="assets/img/chatWall4.png" alt="Slide 4" class="w-full h-full object-cover rounded-lg" />
               </div>
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall3.png" class="entity-img" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall4.png" class="entity-img" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall1.png" class="entity-img" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/chatWall2.png" class="entity-img" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <div class="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden rounded-lg">
+                <img src="assets/img/chatWall1.png" alt="Slide 5" class="w-full h-full object-cover rounded-lg" />
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"><img src="images/" alt="" srcset=""></div>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination mt-6"></div>
+
+          <!-- Navigation Arrows -->
+          <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
       </div>
@@ -267,52 +270,35 @@
 
 
   <script>
-    // Params
-    var sliderSelector = '.swiper-slider1',
-      options = {
-        init: false,
-        loop: true,
-        speed: 800,
-        slidesPerView: 2, // or 'auto'
-        spaceBetween: 0,
-        centeredSlides: true,
-        effect: 'coverflow', // 'cube', 'fade', 'coverflow',
-        coverflowEffect: {
-          rotate: 50, // Slide rotate in degrees
-          stretch: 0, // Stretch space between slides (in px)
-          depth: 100, // Depth offset in px (slides translate in Z axis)
-          modifier: 1, // Effect multipler
-          slideShadows: true, // Enables slides shadows
+    const swiper = new Swiper(".swiper-slider1", {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1.5,
         },
-        grabCursor: true,
-        parallax: true,
-        //pagination: {
-        // el: '.swiper-pagination',
-        // clickable: true,
-        // },
-        parallax: false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        768: {
+          slidesPerView: 2.2,
         },
-        breakpoints: {
-          991: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          }
+        1024: {
+          slidesPerView: 3,
         },
-        // Events
-        on: {
-          imagesReady: function () {
-            this.el.classList.remove('loading');
-          }
-        }
-      };
-    var mySwiper = new Swiper(sliderSelector, options);
-
-    // Initialize slider
-    mySwiper.init();
-
+      },
+    });
   </script>
 
 
