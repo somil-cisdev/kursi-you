@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Favicon-->
+  <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+  <link rel="icon" href="assets/img/fav-icon.png" sizes="64x64" type="image/png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>:: Chat ::</title>
+
+  <!-- Tailwind CSS config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/custom.js"></script>
+</head>
+
+<body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
+
+  <nav
+    class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-[#F2DB73]">
+          <img src="assets/img/logo.png" alt="" />
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul id="desktop-menu" class="hidden md:flex space-x-6 text-white">
+          <li>
+            <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Home</a>
+          </li>
+          <!-- Default Active -->
+          <li>
+            <a href="#" class="menu-link active hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-[#F2DB73] transition-all duration-500 ease-out">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-[#F2DB73] text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Initially Hidden) -->
+      <div id="mobile-menu"
+        class="hidden opacity-0 scale-95 transform origin-top bg-gray-800 p-4 rounded-lg transition-all duration-300 ease-in-out">
+        <ul class="flex flex-col items-center space-y-12 text-white">
+          <li><a href="#" class="menu-link hover:text-[#F2DB73]">Home</a></li>
+          <!-- Default Active -->
+          <li>
+            <a href="#" class="menu-link active hover:text-[#F2DB73]">Gallery</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-[#F2DB73]">Profile</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-[#F2DB73]">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex items-center justify-center mt-32 mb-16 min-h-[70svh]">
+    <div class="max-w-7xl mx-auto w-full p-5">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1
+          class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">
+          Chat
+        </h1>
+      </div>
+
+      <!-- Content -->
+
+      <div class="flex flex-col md:flex-row rounded-lg gap-2  overflow-hidden">
+
+        <div class="md:w-1/3 p-4 ">
+          <div
+            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 py-4 h-full">
+
+
+
+            <div class="py-2 px-4 mb-3">
+              <div class="custom-gradient-border hover:transform-none   m-0 w-full">
+                <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+               focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                             outline-none border-none" placeholder="Search Contact" />
+
+
+                <button
+                  class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+              </div>
+            </div>
+
+
+
+            <div class="overflow-y-auto max-h-[500px]">
+
+              <div class="avatar-img flex items-center py-2 px-4 border-l-4 border-[#F2DB73] bg-[#2A2A2A]">
+                <img src="assets/img/player-5.webp" alt="Avatar"
+                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
+                <div class="ps-3">
+                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
+                  <p class="text-xs text-white">Thanks Mike! :)</p>
+                </div>
+              </div>
+
+
+
+              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
+                <img src="assets/img/player-1.webp" alt="Avatar"
+                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
+                <div class="ps-3">
+                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
+                  <p class="text-xs text-white">Thanks Mike! :)</p>
+                </div>
+              </div>
+
+              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
+                <img src="assets/img/player-3.webp" alt="Avatar"
+                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
+                <div class="ps-3">
+                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
+                  <p class="text-xs text-white">Thanks Mike! :)</p>
+                </div>
+              </div>
+
+
+
+              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
+                <img src="assets/img/player-6.webp" alt="Avatar"
+                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
+                <div class="ps-3">
+                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
+                  <p class="text-xs text-white">Thanks Mike! :)</p>
+                </div>
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="md:w-2/3 p-4 ">
+
+
+          <!-- Chat Entries -->
+          <div
+            class="space-y-4 p-4 bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30  rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30">
+            <!-- Repeat this block for each message -->
+            <div class="overflow-y-auto max-h-[500px]">
+              <div class="mb-2">
+                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
+                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
+                  Hello, Katrina
+                </span>
+              </div>
+
+              <div class="mb-2 text-right">
+                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
+                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
+                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
+                </span>
+              </div>
+
+              <!-- Repeat this block for each message -->
+              <div class="mb-2">
+                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
+                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
+                  Hello, Katrina
+                </span>
+              </div>
+
+
+              <div class="mb-2 text-right">
+                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
+                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
+                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
+                </span>
+              </div>
+
+
+              <!-- Repeat this block for each message -->
+              <div class="mb-2">
+                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
+                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
+                  Hello, Katrina
+                </span>
+              </div>
+
+
+              <div class="mb-2 text-right">
+                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
+                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
+                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
+                </span>
+              </div>
+
+
+              <!-- Repeat this block for each message -->
+              <div class="mb-2">
+                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
+                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
+                  Hello, Katrina
+                </span>
+              </div>
+
+
+              <div class="mb-2 text-right">
+                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
+                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
+                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
+                </span>
+              </div>
+            </div>
+
+
+            <div class="custom-gradient-border hover:transform-none   m-0 mt-4 w-full">
+              <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
+               focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
+                             outline-none border-none" placeholder="Write your message here..." />
+              <button
+                class="absolute right-12 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                <i class="fa-solid fa-paperclip"></i>
+              </button>
+              <button
+                class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+
+            <!-- Copy above blocks to simulate conversation history -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center bg-black bg-opacity-15 p-6">
+    <a href="#" class="mb-5 text-2xl font-semibold text-gray-300 pt-4 w-auto inline-block">
+      <img src="assets/img/logo.png" alt="" />
+    </a>
+
+    <ul
+      class="text-md flex items-center justify-center flex-col md:flex-row py-6 gap-6 md:gap-12 transition-all duration-500">
+      <li>
+        <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Gallery</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Profile</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Help Center</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out">Support</a>
+      </li>
+    </ul>
+
+    <ul class="flex justify-center my-6 space-x-5">
+      <li>
+        <a href="#" class="text-gray-500 hover:text-gray-300">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+            <i
+              class="fa-brands fa-facebook-f text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-500 hover:text-gray-300">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+            <i
+              class="fa-brands fa-instagram text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-500 hover:text-gray-300">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+            <i
+              class="fa-brands fa-linkedin text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-500 hover:text-gray-300">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+            <i
+              class="fa-brands fa-x-twitter text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-500 hover:text-gray-300">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+            <i
+              class="fa-brands fa-whatsapp text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+          </button>
+        </a>
+      </li>
+    </ul>
+    <div class="border-t border-gray-700 pt-6">
+      <span class="block text-sm text-center text-gray-400">© 2025
+        <a href="#"
+          class="text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">KURSIYOU.AI</a>.
+        All Rights Reserved.
+      </span>
+    </div>
+  </div>
+
+</body>
+
+</html>

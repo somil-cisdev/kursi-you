@@ -20,7 +20,7 @@
 <body class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] min-h-screen">
 
   <nav
-    class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] fixed top-0 left-0 w-full z-50">
+    class="bg-gradient-to-b from-[#08102a] to-[#0d1b3ee3] shadow-[4px_4px_24px_#0067a12e] sticky top-0 left-0 w-full z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
@@ -71,186 +71,173 @@
     </div>
   </nav>
 
-  <div class="flex items-center justify-center mt-32 mb-16 min-h-[70svh]">
-    <div class="max-w-7xl mx-auto w-full p-5">
-      <!-- Header -->
-      <div class="text-center mb-12">
-        <h1
-          class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">
-          Chat
-        </h1>
-      </div>
 
-      <!-- Content -->
-
-      <div class="flex flex-col md:flex-row rounded-lg gap-2  overflow-hidden">
-
-        <div class="md:w-1/3 p-4 ">
-          <div
-            class="bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 py-4 h-full">
-
-
-
-            <div class="py-2 px-4 mb-3">
-              <div class="custom-gradient-border hover:transform-none   m-0 w-full">
-                <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
-               focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
-                             outline-none border-none" placeholder="Search Contact" />
-
-
-                <button
-                  class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-
-              </div>
-            </div>
-
-
-
-            <div class="overflow-y-auto max-h-[500px]">
-
-              <div class="avatar-img flex items-center py-2 px-4 border-l-4 border-[#F2DB73] bg-[#2A2A2A]">
-                <img src="assets/img/player-5.webp" alt="Avatar"
-                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
-                <div class="ps-3">
-                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
-                  <p class="text-xs text-white">Thanks Mike! :)</p>
-                </div>
-              </div>
-
-
-
-              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
-                <img src="assets/img/player-1.webp" alt="Avatar"
-                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
-                <div class="ps-3">
-                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
-                  <p class="text-xs text-white">Thanks Mike! :)</p>
-                </div>
-              </div>
-
-              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
-                <img src="assets/img/player-3.webp" alt="Avatar"
-                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
-                <div class="ps-3">
-                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
-                  <p class="text-xs text-white">Thanks Mike! :)</p>
-                </div>
-              </div>
-
-
-
-              <div class="avatar-img flex items-center py-2 px-4 hover:bg-[#2A2A2A]">
-                <img src="assets/img/player-6.webp" alt="Avatar"
-                  class="w-12 h-12 rounded-full border-2 border-[#F2DB73]">
-                <div class="ps-3">
-                  <p class="text-xs font-semibold text-white mb-1">Katrina Bennett</p>
-                  <p class="text-xs text-white">Thanks Mike! :)</p>
-                </div>
-              </div>
-
-            </div>
-
-
-
+  <!-- Header -->
+  <div class="mb-12 mt-20">
+    <div class="text-center mb-12">
+      <h1
+        class="text-3xl text-transparent bg-clip-text bg-[linear-gradient(227.14deg,_#F9FFCF_-4.88%,_#F2DB73_45.32%,_#C49235_103.07%)] font-bold">
+        Chat
+      </h1>
+    </div>
+    <div class="max-w-7xl mx-auto w-full shadow-[0px_4px_20px_rgba(0,0,0,0.4)]">
+      <div class="flex flex-col md:flex-row rounded-lg gap-2">
+        <div class="md:w-1/3 p-4">
+          <div>
+            <img src="assets/img/buddhist-monk.png" class="object-cover w-[500px]" alt="" />
           </div>
         </div>
-
         <div class="md:w-2/3 p-4 ">
-
-
-          <!-- Chat Entries -->
           <div
-            class="space-y-4 p-4 bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30  rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30">
-            <!-- Repeat this block for each message -->
-            <div class="overflow-y-auto max-h-[500px]">
-              <div class="mb-2">
-                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
-                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
-                  Hello, Katrina
-                </span>
+            class="max-w-xl mx-auto bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 rounded-xl shadow-md overflow-hidden">
+
+            <!-- Chat Header -->
+            <div
+              class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 px-4 py-3 border-b flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <button class="text-white hover:text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div class="flex items-center space-x-2">
+                  <img class="h-8 w-8 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Alex Morgan">
+                  <div class="text-left">
+                    <p class="font-medium text-white">Alex Morgan</p>
+                    <p class="text-xs text-white">Online</p>
+                  </div>
+                </div>
               </div>
-
-              <div class="mb-2 text-right">
-                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
-                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
-                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
-                </span>
-              </div>
-
-              <!-- Repeat this block for each message -->
-              <div class="mb-2">
-                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
-                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
-                  Hello, Katrina
-                </span>
-              </div>
-
-
-              <div class="mb-2 text-right">
-                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
-                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
-                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
-                </span>
-              </div>
-
-
-              <!-- Repeat this block for each message -->
-              <div class="mb-2">
-                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
-                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
-                  Hello, Katrina
-                </span>
-              </div>
-
-
-              <div class="mb-2 text-right">
-                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
-                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
-                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
-                </span>
-              </div>
-
-
-              <!-- Repeat this block for each message -->
-              <div class="mb-2">
-                <p class="text-xs text-white mb-1">AI, 02:10 PM</p>
-                <span class="bg-[#043359] text-[#F2DB73] font-medium px-4 py-2 rounded  inline-block">
-                  Hello, Katrina
-                </span>
-              </div>
-
-
-              <div class="mb-2 text-right">
-                <p class="text-xs text-white mb-1">Katrina, 02:10 PM</p>
-                <span class="bg-[#ffffff1a] px-4 py-2 rounded inline-block">
-                  <p class="text-white text-left">Hey! Guru.<br />I want to ask something.</p>
-                </span>
+              <div class="flex items-center space-x-3">
+                <button class="text-gray-300 hover:text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v8a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z" />
+                  </svg>
+                </button>
+                <button class="text-gray-300 hover:text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
               </div>
             </div>
 
+            <!-- Chat Messages -->
+            <div class="h-96 overflow-y-auto p-4 space-y-3 scrollbar-custom">
+              <!-- Received Message -->
+              <div class="flex items-start space-x-2">
+                <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                  src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Morgan">
+                <div class="text-left">
+                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg p-3 max-w-xs text-xs">
+                    <p class="text-[#F2DB73]">Hey! How's it going?</p>
+                  </div>
+                  <p class="text-[10px] text-gray-500 mt-2">10:30 AM</p>
+                </div>
+              </div>
 
-            <div class="custom-gradient-border hover:transform-none   m-0 mt-4 w-full">
-              <input type="email" class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 rounded-[15px] 
-               focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
-                             outline-none border-none" placeholder="Write your message here..." />
-              <button
-                class="absolute right-12 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
-                <i class="fa-solid fa-paperclip"></i>
-              </button>
-              <button
-                class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
-                <i class="fa-regular fa-paper-plane"></i>
-              </button>
+              <!-- Sent Message -->
+              <div class="flex items-start justify-end space-x-2">
+                <div class="text-right">
+                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg p-3 max-w-xs ml-auto text-xs">
+                    <p>Pretty good! Just finished that project we talked about.</p>
+                  </div>
+                  <p class="text-[10px] text-gray-500 mt-2">10:32 AM</p>
+                </div>
+                <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                  src="https://randomuser.me/api/portraits/women/45.jpg" alt="You">
+              </div>
+
+              <!-- Received Message with Image -->
+              <div class="flex items-start space-x-2">
+                <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                  src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Morgan">
+                <div class="text-left">
+                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg p-2 max-w-xs text-xs">
+                    <img class="rounded w-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Design work">
+                    <p class="text-[#F2DB73] mt-2">This looks amazing! Great job!</p>
+                  </div>
+                  <p class="text-[10px] text-gray-500 mt-2">10:35 AM</p>
+                </div>
+              </div>
+
+              <!-- Sent Message -->
+              <div class="flex items-start justify-end space-x-2">
+                <div class="text-right">
+                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg p-3 max-w-xs ml-auto text-xs">
+                    <p>Thanks! I appreciate it. Let me know if you want to collaborate on something.</p>
+                  </div>
+                  <p class="text-[10px] text-gray-500 mt-2">10:37 AM</p>
+                </div>
+                <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                  src="https://randomuser.me/api/portraits/women/45.jpg" alt="You">
+              </div>
+
+              <!-- Received Message -->
+              <div class="flex items-start space-x-2">
+                <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
+                  src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Morgan">
+                <div class="text-left">
+                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg p-3 max-w-xs text-xs">
+                    <p>Definitely! I have an idea for a new project. Are you free this weekend to discuss?</p>
+                  </div>
+                  <p class="text-[10px] text-gray-500 mt-2">10:39 AM</p>
+                </div>
+              </div>
             </div>
 
-            <!-- Copy above blocks to simulate conversation history -->
+            <!-- Message Input -->
+            <div
+              class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 p-3">
+              <div class="flex items-center space-x-2">
+                <!-- <button class="text-gray-300 hover:text-gray-500 p-1 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </button> -->
+                <div class="custom-gradient-border w-full">
+                  <input type="text" placeholder="Type a message"
+                    class="w-full bg-[#1C1D22] text-gray-400 rounded-[12px] py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-20" />
+                  <button
+                    class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                    <i class="fa-solid fa-paperclip"></i>
+                  </button>
+                  <button
+                    class="absolute right-12 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                    <i class="fa-solid fa-microphone"></i>
+                  </button>
+                </div>
+                <!-- <button class="text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out"> -->
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg> -->
+                  <!-- <i class="fa-solid fa-paperclip"></i> -->
+                  <!-- <i class="fa-solid fa-microphone"></i> -->
+                <!-- </button> -->
+                <button
+                  class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#0d2e91] bg-opacity-30 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out p-3 rounded">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+              clip-rule="evenodd" />
+          </svg> -->
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  
   </div>
 
   <div class="text-center bg-black bg-opacity-15 p-6">
