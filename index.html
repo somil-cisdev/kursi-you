@@ -324,6 +324,52 @@
   </footer>
 
 
+  <!-- feedback form  -->
+
+  <!-- Chat Button -->
+  <button
+    class="fixed bottom-4 right-3 flex items-center justify-center w-12 h-12 [background:linear-gradient(150deg,#0072c8,#0a0a0a)] [color:#f4eb9c] text-lg rounded-full hover:opacity-80 transition"
+    onclick="openForm()">
+    <i class="fa-solid fa-comment-dots text-xl text-[#F2DB73]"></i>
+  </button>
+
+  <!-- Chat Popup -->
+  <div id="myForm" class="hidden fixed bottom-0 right-4 z-50">
+    <form
+      class="relative max-w-[320px] p-4 rounded-2xl bg-gradient-to-b from-[#181e36] to-[#0d1b3e] text-gray-200 shadow-2xl border border-[#F2DB73]">
+      <!-- Close Icon Button -->
+      <button type="button"
+        class="absolute top-3 right-3 text-[#F2DB73] hover:text-[#C49235] text-xl focus:outline-none"
+        onclick="closeForm()" aria-label="Close chat">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="flex items-center space-x-2 mb-3">
+        <i class="fa-solid fa-chalkboard-user text-lg text-[#F2DB73]"></i>
+        <h3 class="text-lg font-semibold leading-none text-[#F2DB73]">Feedback</h3>
+      </div>
+      <label for="msg" class="block mb-1 font-medium text-gray-300">Message</label>
+      <textarea name="msg" required placeholder="Type message.."
+        class="w-full min-h-[160px] p-4 mb-5 rounded-2xl bg-[#232a47] text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#F2DB73] resize-none placeholder-gray-400"></textarea>
+      <button type="submit"
+        class="w-full py-2.5 text-lg rounded-2xl font-bold bg-gradient-to-r from-[#F9FFCF] via-[#F2DB73] to-[#C49235] text-[#181e36] hover:opacity-90 transition shadow-md">
+        Send
+      </button>
+    </form>
+  </div>
+
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").classList.remove("hidden");
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").classList.add("hidden");
+    }
+  </script>
+
+
+
   <script src="assets/js/swiper.min.js"></script>
 
 
