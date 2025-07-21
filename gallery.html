@@ -102,13 +102,13 @@
                 <i class="fa-solid fa-camera-retro"></i> Media Gallery
             </h1>
 
-            <div class="flex flex-wrap justify-between items-center mb-6 gap-4">
+            <div class="flex flex-wrap justify-start items-center mb-6 gap-4">
 
                 <div class="text-left mb-4 relative w-64">
 
                     <div class="text-left mb-5 relative">
                         <label class="text-white text-md">Categories</label>
-                        <div class="custom-gradient-border mt-3">
+                        <div class="custom-gradient-border mt-3 ml-0">
                             <select class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 hover:text-[#F2DB73] rounded-[15px] 
                                 focus:border-[#F2DB73] focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
                                                outline-none border-none appearance-none pr-10">
@@ -118,7 +118,7 @@
                                 <option>Art</option>
                             </select>
                         </div>
-                        <div class="absolute top-[55%] right-3 flex items-center pointer-events-none">
+                        <div class="absolute top-[55%] right-4 flex items-center pointer-events-none">
 
                             <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                 fill="currentColor">
@@ -135,7 +135,7 @@
 
                     <div class="text-left mb-5 relative">
                         <label class="text-white text-md">Sort</label>
-                        <div class="custom-gradient-border mt-3">
+                        <div class="custom-gradient-border mt-3 ml-0">
                             <select class="w-full h-[56px] p-4 bg-[#1C1D22] text-gray-400 hover:text-[#F2DB73] rounded-[15px] 
                                 focus:border-[#F2DB73] focus:ring-2 focus:ring-yellow-200 transition-all duration-500 ease-out placeholder-gray-500
                                                outline-none border-none appearance-none pr-10">
@@ -144,7 +144,7 @@
                                 <option>Sort by Name</option>
                             </select>
                         </div>
-                        <div class="absolute top-[55%] right-3 flex items-center pointer-events-none">
+                        <div class="absolute top-[55%] right-4 flex items-center pointer-events-none">
 
                             <svg class="w-6 h-6 text-[#fff]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                 fill="currentColor">
@@ -182,13 +182,18 @@
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
 
-                    <div class="absolute top-4 left-4 flex items-center space-x-2">
-                        <img src="assets/img/profile.png" alt="User" class="w-10 h-10 rounded-full">
-                        <span class="text-white font-semibold">Amisha S.</span>
+                    <div class="absolute top-4 left-4 flex items-center space-x-2 justify-between w-[calc(100%-40px)]">
+                        <div class="flex items-center space-x-2 ">
+                            <img src="assets/img/profile.png" alt="User" class="w-10 h-10 rounded-full">
+                            <span class="text-white font-semibold">Amisha S.</span>
+                        </div>
+                        <a href="#" class="inline-block">
+                            <i class="fa-solid fa-share text-white text-lg"></i>
+                        </a>
                     </div>
 
-                    <div class="absolute bottom-4 left-4 right-4 text-white">
-                        <div class="flex items-center space-x-4 mb-3">
+                    <div class="absolute bottom-4 left-4 right-4 text-white flexx flex-rowx-reverse">
+                        <div class="flex items-end space-y-3 mb-3 flex-col">
                             <button
                                 class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
                                 <i
@@ -200,11 +205,16 @@
                                     <i
                                         class="fas fa-heart text-gray-400 hover:text-[#F2DB73] transition-all duration-500 ease-out text-lg"></i>
                                 </button>
-                                <span class="text-gray-300">21 Likes</span>
+                                <!-- <span class="text-gray-300">21 Likes</span> -->
                             </div>
+                            <button
+                                class="w-10 h-10 flex items-center justify-center rounded-full border-2 bg-[radial-gradient(64.58%_64.58%_at_76.04%_20.49%,#515563_0%,#1C1D22_100%)] border-[#F2DB73]">
+                                <i
+                                    class="fas fa-comment text-gray-400 text-lg hover:text-[#F2DB73] transition-all duration-500 ease-out"></i>
+                            </button>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -234,7 +244,7 @@
                                 <span class="text-gray-300">21 Likes</span>
                             </div>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -269,7 +279,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -304,7 +314,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -334,7 +344,7 @@
                                 <span class="text-gray-300">21 Likes</span>
                             </div>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -364,7 +374,7 @@
                                 <span class="text-gray-300">21 Likes</span>
                             </div>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Why solo trips are widely connected to spiritual experiences?
                         </p>
                     </div>
@@ -396,7 +406,7 @@
                             <span class="text-gray-300">21 Likes</span>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Spiritual Guru
                         </p>
                     </div>
@@ -420,7 +430,7 @@
                             </button>
                             <span class="text-gray-300">21 Likes</span>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Academic Scholar
                         </p>
                     </div>
@@ -449,7 +459,7 @@
                             <span class="text-gray-300">21 Likes</span>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Futuristic Hero
                         </p>
                     </div>
@@ -478,7 +488,7 @@
                             <span class="text-gray-300">21 Likes</span>
                         </div>
 
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Academic Scholar
                         </p>
                     </div>
@@ -502,7 +512,7 @@
                             </button>
                             <span class="text-gray-300">21 Likes</span>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Futuristic Hero
                         </p>
                     </div>
@@ -526,7 +536,7 @@
                             </button>
                             <span class="text-gray-300">21 Likes</span>
                         </div>
-                        <p class="text-lg font-medium leading-[1.5]">
+                        <p class="text-base font-medium leading-[1.5]">
                             Spiritual Guru
                         </p>
                     </div>
