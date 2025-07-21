@@ -80,20 +80,20 @@
         Chat
       </h1>
     </div>
-    <div class="max-w-7xl mx-auto w-full shadow-[0px_4px_20px_rgba(0,0,0,0.4)]">
-      <div class="flex flex-col md:flex-row rounded-lg gap-2">
-        <div class="md:w-1/3 p-4">
-          <div>
-            <img src="assets/img/buddhist-monk.png" class="object-cover w-[500px]" alt="" />
+    <div class="max-w-7xl  mx-auto w-full shadow-[0px_4px_20px_rgba(0,0,0,0.4)]">
+      <div class="flex md:h-auto h-[calc(100svh-100px)] items-center relative flex-col md:flex-row rounded-lg gap-2">
+        <div class="md:w-1/3 p-4 md:h-fit h-full">
+          <div class="md:h-fit h-full">
+            <img src="assets/img/Character.webp" class="object-cover md:w-[500px] w-full md:h-auto h-full" alt="" />
           </div>
         </div>
-        <div class="md:w-2/3 p-4 ">
+        <div class="md:w-2/3 p-4 md:static absolute bottom-0 left-0 w-full">
           <div
-            class="max-w-xl mx-auto bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 rounded-xl shadow-md overflow-hidden">
+            class=" max-w-none w-full mx-auto md:backdrop-blur-none backdrop-blur md:bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 rounded-xl shadow-md overflow-hidden">
 
             <!-- Chat Header -->
             <div
-              class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 px-4 py-3 border-b flex items-center justify-between">
+              class=" md:bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 sm:px-4 px-2 sm:py-3 py-2 border-b flex items-center justify-between">
               <div class="flex items-center space-x-3">
                 <button class="text-white hover:text-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -102,11 +102,11 @@
                       clip-rule="evenodd" />
                   </svg>
                 </button>
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center sm:space-x-2 space-x-1">
                   <img class="h-8 w-8 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/32.jpg"
                     alt="Alex Morgan">
                   <div class="text-left">
-                    <p class="font-medium text-white">Alex Morgan</p>
+                    <p class="font-medium text-white sm:text-base text-sm">Alex Morgan</p>
                     <p class="text-xs text-white">Online</p>
                   </div>
                 </div>
@@ -129,26 +129,26 @@
             </div>
 
             <!-- Chat Messages -->
-            <div class="h-96 overflow-y-auto p-4 space-y-3 scrollbar-custom">
+            <div class="md:h-96 sm:h-60 h-48 overflow-y-auto p-4 space-y-3 scrollbar-custom">
               <!-- Received Message -->
               <div class="flex items-start space-x-2">
                 <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
                   src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Morgan">
                 <div class="text-left">
-                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg p-3 max-w-xs text-xs">
+                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg sm:p-3 p-2 max-w-xs text-xs">
                     <p class="text-[#F2DB73]">Hey! How's it going?</p>
                   </div>
-                  <p class="text-[10px] text-gray-500 mt-2">10:30 AM</p>
+                  <p class="sm:text-[10px] text-[9px] md:text-gray-500 text-gray-300 sm:mt-2 mt-1">10:30 AM</p>
                 </div>
               </div>
 
               <!-- Sent Message -->
               <div class="flex items-start justify-end space-x-2">
                 <div class="text-right">
-                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg p-3 max-w-xs ml-auto text-xs">
+                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg sm:p-3 p-2 max-w-xs ml-auto text-xs">
                     <p>Pretty good! Just finished that project we talked about.</p>
                   </div>
-                  <p class="text-[10px] text-gray-500 mt-2">10:32 AM</p>
+                  <p class="sm:text-[10px] text-[9px] md:text-gray-500 text-gray-300 sm:mt-2 mt-1">10:32 AM</p>
                 </div>
                 <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
                   src="https://randomuser.me/api/portraits/women/45.jpg" alt="You">
@@ -163,17 +163,17 @@
                     <img class="rounded w-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Design work">
                     <p class="text-[#F2DB73] mt-2">This looks amazing! Great job!</p>
                   </div>
-                  <p class="text-[10px] text-gray-500 mt-2">10:35 AM</p>
+                  <p class="sm:text-[10px] text-[9px] md:text-gray-500 text-gray-300 sm:mt-2 mt-1">10:35 AM</p>
                 </div>
               </div>
 
               <!-- Sent Message -->
               <div class="flex items-start justify-end space-x-2">
                 <div class="text-right">
-                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg p-3 max-w-xs ml-auto text-xs">
+                  <div class="bg-[#ffffff1a] text-gray-300 rounded-lg sm:p-3 p-2 max-w-xs ml-auto text-xs">
                     <p>Thanks! I appreciate it. Let me know if you want to collaborate on something.</p>
                   </div>
-                  <p class="text-[10px] text-gray-500 mt-2">10:37 AM</p>
+                  <p class="sm:text-[10px] text-[9px] md:text-gray-500 text-gray-300 sm:mt-2 mt-1">10:37 AM</p>
                 </div>
                 <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
                   src="https://randomuser.me/api/portraits/women/45.jpg" alt="You">
@@ -184,18 +184,18 @@
                 <img class="h-8 w-8 rounded-full object-cover flex-shrink-0"
                   src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Morgan">
                 <div class="text-left">
-                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg p-3 max-w-xs text-xs">
+                  <div class="bg-[#043359] text-[#F2DB73] rounded-lg sm:p-3 p-2 max-w-xs text-xs">
                     <p>Definitely! I have an idea for a new project. Are you free this weekend to discuss?</p>
                   </div>
-                  <p class="text-[10px] text-gray-500 mt-2">10:39 AM</p>
+                  <p class="sm:text-[10px] text-[9px] md:text-gray-500 text-gray-300 sm:mt-2 mt-1">10:39 AM</p>
                 </div>
               </div>
             </div>
 
             <!-- Message Input -->
             <div
-              class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 p-3">
-              <div class="flex items-center space-x-2">
+              class=" md:bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 md:rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#ffffff0f] bg-opacity-30 md:p-3 pr-1">
+              <div class="flex items-center sm:space-x-2 space-x-1">
                 <!-- <button class="text-gray-300 hover:text-gray-500 p-1 rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -205,26 +205,26 @@
                 </button> -->
                 <div class="custom-gradient-border w-full">
                   <input type="text" placeholder="Type a message"
-                    class="w-full bg-[#1C1D22] text-gray-400 rounded-[12px] py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-20" />
+                    class="w-full bg-[#1C1D22] sm:text-base text-sm text-gray-400 rounded-[12px] py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent sm:pr-20 pr-16" />
                   <button
-                    class="absolute right-4 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
-                    <i class="fa-solid fa-paperclip"></i>
+                    class="absolute sm:right-4 right-3 sm:top-4 top-3 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                    <i class="fa-solid fa-microphone"></i>
                   </button>
                   <button
-                    class="absolute right-12 top-4 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
-                    <i class="fa-solid fa-microphone"></i>
+                    class="absolute sm:right-12 right-10 sm:top-4 top-3 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out">
+                    <i class="fa-solid fa-paperclip"></i>
                   </button>
                 </div>
                 <!-- <button class="text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out"> -->
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg> -->
-                  <!-- <i class="fa-solid fa-paperclip"></i> -->
-                  <!-- <i class="fa-solid fa-microphone"></i> -->
+                <!-- <i class="fa-solid fa-paperclip"></i> -->
+                <!-- <i class="fa-solid fa-microphone"></i> -->
                 <!-- </button> -->
                 <button
-                  class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#0d2e91] bg-opacity-30 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out p-3 rounded">
+                  class=" bg-gradient-to-b from-[#0d1b3e] to-[#08102a] bg-opacity-30 sm:rounded-2xl rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.4)] border border-[#0d2e91] bg-opacity-30 text-[#F2DB73] hover:text-[#F9FFCF] transition-all duration-500 ease-out sm:p-3 p-2 rounded">
                   <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
