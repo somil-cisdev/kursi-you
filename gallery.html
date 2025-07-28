@@ -14,11 +14,11 @@
     <title>::Gallery::</title>
 
     <!-- Tailwind CSS config -->
-    <script src="https://cdn.tailwindcss.com/4.0.0"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/4.0.0"></script>
     <!-- TW Elements JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <!-- <script src="assets/js/custom.js"></script> -->
 
 </head>
 
@@ -66,7 +66,7 @@
 
     <!-- notification -->
 
-    <div class="w-full md:w-1/2 sm:w-1/2 xl:w-1/4 mx-auto fixed right-6 top-30 z-10">
+    <div class="sm:w-full w-[calc(100%_-_1.5rem)] md:w-1/2 sm:w-1/2 xl:w-1/4 mx-auto fixed sm:right-6 right-2 top-30 z-10">
 
         <div class="flex items-center justify-between p-5 leading-normal text-blue-600 bg-blue-100 rounded-lg transition-transform transform hover:scale-105"
             role="alert">
@@ -169,8 +169,7 @@
             <div id="avatarTab"
                 class="tab-content p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 gap-y-16 mt-8">
 
-                <div
-                    class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                <div class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                     <img src="assets/img/buddhist-monk.png" alt="Monk"
                         class="absolute inset-0 w-full h-full object-cover">
 
@@ -231,8 +230,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                <div class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                     <img src="assets/img/player-6.webp" alt="Monk" class="absolute inset-0 w-full h-full object-cover">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
@@ -292,8 +290,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                <div class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                     <img src="assets/img/acadmic.png" alt="Monk" class="absolute inset-0 w-full h-full object-cover">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
@@ -353,8 +350,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
+                <div class="relative w-[300px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition hover:shadow-[0px_0px_50px_0px_rgba(255,223,13,0.3)]">
                     <img src="assets/img/player-1.webp" alt="Monk" class="absolute inset-0 w-full h-full object-cover">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
@@ -989,8 +985,7 @@
 
     <div id="mainModal" class="fixed z-50 inset-0 overflow-y-auto hidden">
         <div class="flex items-center justify-center min-h-screen bg-[#00000090]">
-            <div
-                class="w-full bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 mx-4  h-full  shadow-2xl relative">
+            <div class="w-full bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 mx-4  h-full  shadow-2xl relative">
                 <div
                     class="flex justify-between items-center border-b border-[#232a47] sticky top-0 w-full pt-3 px-2 pb-3 mb-2 bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl">
                     <div
@@ -1108,10 +1103,9 @@
     </div>
 
     <!-- Add Like Modal after viewMainModal -->
-    <div id="likeMainModal" class="fixed z-50 inset-0 overflow-y-auto hidden">
-        <div class="flex items-center justify-center min-h-screen bg-[#00000090]">
-            <div
-                class="w-full bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 mx-4 h-full shadow-2xl relative">
+    <div id="likeMainModal" class="fixed z-50 inset-0 overflow-y-auto hidden mobileSlideUp">
+        <div class="flex sm:items-center items-end justify-center min-h-screen bg-[#00000090]">
+            <div class="w-full modalWrapper bg-gradient-to-b from-[#181e36] to-[#0d1b3e] sm:rounded-2xl rounded-t-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 sm:mx-4 h-full shadow-2xl relative">
                 <div
                     class="flex justify-between items-center border-b border-[#232a47] sticky top-0 w-full pt-3 px-2 pb-3 mb-2 bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl">
                     <div
@@ -1145,10 +1139,9 @@
     </div>
 
     <!-- Update viewMainModal content to show user list instead of comments -->
-    <div id="viewMainModal" class="fixed z-50 inset-0 overflow-y-auto hidden">
-        <div class="flex items-center justify-center min-h-screen bg-[#00000090]">
-            <div
-                class="w-full bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 mx-4 h-full shadow-2xl relative">
+    <div id="viewMainModal" class="fixed z-50 inset-0 overflow-y-auto hidden mobileSlideUp">
+        <div class="flex sm:items-center items-end justify-center min-h-screen bg-[#00000090]">
+            <div class="w-full modalWrapper bg-gradient-to-b from-[#181e36] to-[#0d1b3e] sm:rounded-2xl rounded-t-2xl border border-[#F2DB73] px-1 md:px-3 max-w-2xl md:m-10 sm:mx-4 h-full shadow-2xl relative">
                 <div
                     class="flex justify-between items-center border-b border-[#232a47] sticky top-0 w-full pt-3 px-2 pb-3 mb-2 bg-gradient-to-b from-[#181e36] to-[#0d1b3e] rounded-2xl">
                     <div
@@ -1188,18 +1181,25 @@
             const triggers = document.querySelectorAll(triggerSelector);
             const modal = document.querySelector(modalSelector);
             const closes = modal.querySelectorAll(closeSelector);
+            const mobileSlideUp = modal.classList.contains('mobileSlideUp');
 
             triggers.forEach(trigger => {
                 trigger.addEventListener('click', () => {
                     modal.classList.remove('hidden');
+                    modal.classList.remove('mobileSlideDown');
                     document.body.style.overflow = 'hidden';
                 });
             });
 
             closes.forEach(close => {
                 close.addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
+                    if(mobileSlideUp){
+                        modal.classList.add('mobileSlideDown');
+                    }
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 350);
                 });
             });
         }

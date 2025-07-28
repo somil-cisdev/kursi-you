@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const togglePassword = document.getElementById("togglePassword");
   const ConfirmtogglePassword = document.getElementById("togglePasswordConfirm");

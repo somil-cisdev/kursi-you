@@ -414,3 +414,34 @@ body {
     /* scrollbar-width: thin; */
     scrollbar-color: #ffffff47 #043359;
 }
+
+@media screen and (max-width: 640px) {
+    .mobileSlideUp .modalWrapper{
+        animation: slideUp 0.5s ease-in-out;
+    }
+    .mobileSlideDown .modalWrapper{
+        animation: fadeDown 0.5s ease-in-out;
+    }
+}
+ 
+@keyframes slideUp{
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
